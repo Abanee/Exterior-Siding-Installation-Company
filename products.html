@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siding Products &amp; Architectural Showroom | SidingPro</title>
+  <meta name="description" content="Explore, compare, and select premium exterior siding materials. Architectural showroom comparing vinyl, fiber cement, and western red cedar siding.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Standardized Global Header -->
+  <header class="site-header">
+    <div class="container-wide header-container">
+      <a href="index.html" class="site-logo" aria-label="SidingPro Home">
+        <span class="logo-mark">▲</span>
+        <span>Siding<b>Pro</b> <span class="tagline-hide" style="font-size:0.75rem;font-weight:500;opacity:0.75;margin-inline-start:4px;">· Craft &amp; Siding</span></span>
+      </a>
+
+      <!-- Standardized Main Navigation Links -->
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link active" aria-current="page">Products</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Controls: Theme -> RTL -> Login -> Mobile Menu -->
+      <div class="header-actions">
+        <!-- Theme Toggle with SVG Icons -->
+        <button type="button" class="icon-ctrl-btn theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" style="display:none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Direction Toggle (RTL / LTR) -->
+        <button type="button" class="icon-ctrl-btn dir-toggle" aria-label="Toggle text direction LTR/RTL">
+          <span class="dir-toggle-text">RTL</span>
+        </button>
+
+        <!-- Auth Controls: Direct Log In Link -->
+        <a href="login.html" class="btn btn-login">
+          <span>Log In</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button type="button" class="mobile-menu-btn" aria-label="Open mobile navigation" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- ====================================================================
+         1. HERO — MATERIAL SHOWROOM
+         ==================================================================== -->
+    <section class="prod-hero">
+      <div class="container prod-hero-grid">
+        <div class="prod-hero-content rv">
+          <span class="eyebrow">Architectural Material Showroom</span>
+          <h1 class="prod-hero-headline">Find the siding that fits your <span style="color:var(--brand-accent);">home.</span></h1>
+          <p class="prod-hero-lead">
+            Exterior cladding defines your home’s character, maintenance obligations, and weather resilience. We present siding not as bulk hardware, but as curated architectural mediums tailored to your design vision.
+          </p>
+
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="#comparison" class="btn btn-primary">
+              <span>Compare Materials</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#decisionGuide" class="btn btn-outline">
+              <span>Decision Guide</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="prod-hero-visual rv rv-delay-1">
+          <div class="prod-hero-main-img">
+            <img src="images/hero.jpg" alt="Exemplary residence showing clean architectural siding lines and exterior trim">
+          </div>
+
+          <!-- Layered Material Swatch Chips -->
+          <div class="prod-swatch-layers">
+            <div class="prod-swatch-chip">
+              <div class="prod-swatch-thumb"><img src="images/vinyl.jpg" alt="Vinyl swatch"></div>
+              <span>Insulated Vinyl</span>
+            </div>
+            <div class="prod-swatch-chip">
+              <div class="prod-swatch-thumb"><img src="images/cement.jpg" alt="Fiber cement swatch"></div>
+              <span>Fiber Cement</span>
+            </div>
+            <div class="prod-swatch-chip">
+              <div class="prod-swatch-thumb"><img src="images/wood.jpg" alt="Cedar wood swatch"></div>
+              <span>Western Red Cedar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         2. MATERIAL NAVIGATION (Sticky Segmented Selector)
+         ==================================================================== -->
+    <nav class="prod-mat-nav-shell" aria-label="Material Navigation Selector">
+      <div class="prod-mat-nav">
+        <button type="button" class="prod-mat-btn active" data-target="vinyl">
+          <span>01 · Architectural Vinyl</span>
+        </button>
+        <button type="button" class="prod-mat-btn" data-target="cement">
+          <span>02 · Engineered Fiber Cement</span>
+        </button>
+        <button type="button" class="prod-mat-btn" data-target="wood">
+          <span>03 · Natural Red Cedar</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ====================================================================
+         3. VINYL SIDING SHOWCASE
+         ==================================================================== -->
+    <section class="mat-feature-section" id="vinyl">
+      <div class="container mat-feature-grid">
+        <div class="mat-feature-content rv">
+          <span class="eyebrow">Cladding Medium 01</span>
+          <h2 style="font-size:clamp(2rem, 3.8vw, 3rem);margin-block-end:1rem;">Architectural Insulated Vinyl</h2>
+          <p style="color:var(--text-muted);font-size:1.05rem;line-height:1.6;margin-block-end:1.75rem;">
+            Modern insulated vinyl has evolved far beyond lightweight plastic panels of the past. Contemporary engineered profiles feature rigid foam backing, deep woodgrain embossing, and locked-in thermal resistance.
+          </p>
+
+          <div class="mat-spec-matrix">
+            <div class="mat-spec-box">
+              <span class="mat-spec-label">Visual Character</span>
+              <p class="mat-spec-val">Clean horizontal shadow lines, crisp corners, matte low-gloss finishes.</p>
+            </div>
+            <div class="mat-spec-box">
+              <span class="mat-spec-label">Maintenance Profile</span>
+              <p class="mat-spec-val">Near zero. Never requires painting, scraping, or chemical resealing.</p>
+            </div>
+            <div class="mat-spec-box">
+              <span class="mat-spec-label">Best Suited For</span>
+              <p class="mat-spec-val">Homeowners seeking maximum thermal value and zero upkeep routines.</p>
+            </div>
+            <div class="mat-spec-box">
+              <span class="mat-spec-label">Key Trade-Offs</span>
+              <p class="mat-spec-val">Requires precise expansion gaps; cannot be easily custom-repainted later.</p>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-outline">
+            <span>Inquire About Vinyl Options</span>
+          </a>
+        </div>
+
+        <div class="mat-feature-visual rv rv-delay-1">
+          <img src="images/vinyl.jpg" alt="Modern home featuring high-durability insulated vinyl horizontal siding">
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. FIBER CEMENT SHOWCASE
+         ==================================================================== -->
+    <section class="mat-feature-section bg-subtle-section" id="cement">
+      <div class="container mat-feature-grid reverse">
+        <div class="mat-feature-visual rv">
+          <img src="images/cement.jpg" alt="Luxury home with engineered fiber cement lap siding and architectural trim">
+        </div>
+
+        <div class="mat-feature-content rv rv-delay-1">
+          <span class="eyebrow">Cladding Medium 02</span>
+          <h2 style="font-size:clamp(2rem, 3.8vw, 3rem);margin-block-end:1rem;">Engineered Fiber Cement</h2>
+          <p style="color:var(--text-muted);font-size:1.05rem;line-height:1.6;margin-block-end:1.75rem;">
+            A robust composite of Portland cement, sand, and cellulose fibers. It delivers the authentic weight and deep shadow lines of painted lumber while offering non-combustible protection and termite immunity.
+          </p>
+
+          <div class="mat-spec-matrix">
+            <div class="mat-spec-box">
+              <span class="mat-spec-label">Visual Character</span>
+              <p class="mat-spec-val">Substantial architectural depth, authentic milled wood shadow lines, smooth or cedar texture.</p>
+            </div>
+            <div class="mat-spec-box">
+              <span class="mat-spec-label">Maintenance Profile</span>
+              <p class="mat-spec-val">Low to moderate. Factory baked-on finishes last 12–15 years before repainting.</p>
+            </div>
+            <div class="mat-spec-box">
+              <span class="mat-spec-label">Best Suited For</span>
+              <p class="mat-spec-val">Severe weather zones, wildfire-prone areas, and high-end curb appeal.</p>
+            </div>
+            <div class="mat-spec-box">
+              <span class="mat-spec-label">Key Trade-Offs</span>
+              <p class="mat-spec-val">Heavier material requiring specialized cutting tools and diamond blades.</p>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-outline">
+            <span>Inquire About Fiber Cement</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. NATURAL WOOD SHOWCASE
+         ==================================================================== -->
+    <section class="mat-feature-section" id="wood">
+      <div class="container mat-feature-grid">
+        <div class="mat-feature-content rv">
+          <span class="eyebrow">Cladding Medium 03</span>
+          <h2 style="font-size:clamp(2rem, 3.8vw, 3rem);margin-block-end:1rem;">Western Red Cedar</h2>
+          <p style="color:var(--text-muted);font-size:1.05rem;line-height:1.6;margin-block-end:1.75rem;">
+            Unmatched natural beauty and architectural prestige. Western Red Cedar contains natural extractives that resist decay, accompanied by an organic fragrance, sound-dampening density, and rich grain variability.
+          </p>
+
+          <div class="mat-spec-matrix">
+            <div class="mat-spec-box">
+              <span class="mat-spec-label">Visual Character</span>
+              <p class="mat-spec-val">Warm organic grain, rich amber tones, bespoke transparent or semi-solid stains.</p>
+            </div>
+            <div class="mat-spec-box">
+              <span class="mat-spec-label">Maintenance Profile</span>
+              <p class="mat-spec-val">Periodic care required. Restaining or sealing recommended every 4–6 years.</p>
+            </div>
+            <div class="mat-spec-box">
+              <span class="mat-spec-label">Best Suited For</span>
+              <p class="mat-spec-val">Craftsman, Scandinavian contemporary, mountain modern, and accent elevations.</p>
+            </div>
+            <div class="mat-spec-box">
+              <span class="mat-spec-label">Key Trade-Offs</span>
+              <p class="mat-spec-val">Premium material investment; requires ongoing UV and moisture protection.</p>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-outline">
+            <span>Inquire About Cedar Wood</span>
+          </a>
+        </div>
+
+        <div class="mat-feature-visual rv rv-delay-1">
+          <img src="images/wood.jpg" alt="Warm natural Western Red Cedar siding installed on contemporary home facade">
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. HOMEOWNER MATERIAL COMPARISON
+         ==================================================================== -->
+    <section class="section bg-subtle-section" id="comparison">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow rv">Side-By-Side Comparison</span>
+          <h2 class="section-title rv rv-delay-1">Comparing the three core materials.</h2>
+          <p class="section-sub rv rv-delay-2">A practical homeowner comparison of visual character, ongoing maintenance, design flexibility, and real-world considerations.</p>
+        </div>
+
+        <div class="comparison-table-wrap rv rv-delay-2">
+          <table class="homeowner-compare-table">
+            <thead>
+              <tr>
+                <th class="col-feature">Consideration</th>
+                <th>Insulated Vinyl</th>
+                <th>Fiber Cement</th>
+                <th>Western Red Cedar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="feature-title">Appearance &amp; Character</td>
+                <td>Crisp, clean lines with matte low-sheen colors. Consistent appearance across large elevations.</td>
+                <td>Authentic heavy lumber look with sharp, deep shadow lines. Very difficult to distinguish from real painted wood.</td>
+                <td>Unmatched natural grain, authentic warmth, and bespoke stain depth that enhances architectural character.</td>
+              </tr>
+              <tr>
+                <td class="feature-title">Maintenance Expectations</td>
+                <td>Zero painting. Occasional gentle wash with mild household detergent and garden hose.</td>
+                <td>Low to moderate. Baked-on factory finish holds color 12–15 years before repainting is needed.</td>
+                <td>Periodic stewardship. Regular restaining or oil finishing every 4–6 years to maintain color vibrancy.</td>
+              </tr>
+              <tr>
+                <td class="feature-title">Durability &amp; Safety</td>
+                <td>High impact resistance with insulated foam backing. Impervious to moisture and rot.</td>
+                <td>Non-combustible Class A fire rating. Immune to termites, woodpeckers, and rot.</td>
+                <td>Naturally decay-resistant due to thujaplicins; requires fire-resistant barrier in wildland zones.</td>
+              </tr>
+              <tr>
+                <td class="feature-title">Design Flexibility</td>
+                <td>Standard horizontal lap, board &amp; batten, and traditional shake patterns in pre-set color charts.</td>
+                <td>Extensive styling: wide boards, vertical panel grids, mitered corners, and custom factory color matching.</td>
+                <td>Maximum artisanal flexibility: bevel lap, tongue &amp; groove, shiplap, and custom stain matching.</td>
+              </tr>
+              <tr>
+                <td class="feature-title">Best For Homeowners Prioritizing</td>
+                <td>Budget-conscious durability and minimal ongoing exterior maintenance obligations.</td>
+                <td>Long-term architectural permanence, fire safety, and timeless painted curb prestige.</td>
+                <td>Organic tactile luxury, authentic natural materials, and heritage architectural warmth.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         7. MATERIAL TEXTURE SHOWCASE
+         ==================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow rv">Tactile Inspection</span>
+          <h2 class="section-title rv rv-delay-1">Siding textures up close.</h2>
+          <p class="section-sub rv rv-delay-2">Surface textures determine how light and shadow interact with your home throughout the day. Hover to inspect the tactile surface details.</p>
+        </div>
+
+        <div class="tactile-showcase-grid">
+          <article class="tactile-card rv">
+            <div class="tactile-img-wrap">
+              <img src="images/vinyl.jpg" alt="Close-up vinyl texture">
+            </div>
+            <div class="tactile-caption">
+              <h4>Smooth Matte Vinyl</h4>
+              <p>Subtle low-sheen finish that disperses bright sunlight evenly and sheds dirt easily.</p>
+            </div>
+          </article>
+
+          <article class="tactile-card rv rv-delay-1">
+            <div class="tactile-img-wrap">
+              <img src="images/cement.jpg" alt="Close-up fiber cement texture">
+            </div>
+            <div class="tactile-caption">
+              <h4>Architectural Cement Grain</h4>
+              <p>Deep wood-milled relief creating distinct shadow lines under daylight angles.</p>
+            </div>
+          </article>
+
+          <article class="tactile-card rv rv-delay-2">
+            <div class="tactile-img-wrap">
+              <img src="images/wood.jpg" alt="Close-up natural wood grain texture">
+            </div>
+            <div class="tactile-caption">
+              <h4>Clear Vertical Cedar Grain</h4>
+              <p>Natural fibrous open grain that absorbs protective stains and reflects organic warmth.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         8. COLORS & ARCHITECTURAL FINISHES
+         ==================================================================== -->
+    <section class="section bg-subtle-section">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow rv">Visual Inspiration</span>
+          <h2 class="section-title rv rv-delay-1">Colors, trims &amp; exterior harmonies.</h2>
+          <p class="section-sub rv rv-delay-2">Siding selection is about complete exterior harmony. Explore curated color families paired with contrasting trim and accents.</p>
+        </div>
+
+        <div class="color-inspiration-grid">
+          <!-- Family 1 -->
+          <article class="color-palette-card rv">
+            <div class="color-palette-photo">
+              <img src="images/g1.jpg" alt="Modern dark siding with crisp trim">
+            </div>
+            <div class="color-palette-info">
+              <h4>Modern Dark Tones</h4>
+              <p>Charcoal, ironstone, and deep slate paired with bright white fascia and black window trim.</p>
+              <div class="color-chips-row">
+                <span class="color-chip" style="background:#2b3238;"></span>
+                <span class="color-chip" style="background:#4a5259;"></span>
+                <span class="color-chip" style="background:#f4f5f2;"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Family 2 -->
+          <article class="color-palette-card rv rv-delay-1">
+            <div class="color-palette-photo">
+              <img src="images/g2.jpg" alt="Warm natural cedar siding with dark accents">
+            </div>
+            <div class="color-palette-info">
+              <h4>Warm Natural Tones</h4>
+              <p>Rich cedar honey and teak finishes accented by architectural bronze gutters and soffits.</p>
+              <div class="color-chips-row">
+                <span class="color-chip" style="background:#945f34;"></span>
+                <span class="color-chip" style="background:#c28a55;"></span>
+                <span class="color-chip" style="background:#302823;"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Family 3 -->
+          <article class="color-palette-card rv rv-delay-2">
+            <div class="color-palette-photo">
+              <img src="images/g3.jpg" alt="Classic neutral residential exterior">
+            </div>
+            <div class="color-palette-info">
+              <h4>Classic Neutrals</h4>
+              <p>Warm limestone, taupe, and coastal sandstone framing traditional residential proportions.</p>
+              <div class="color-chips-row">
+                <span class="color-chip" style="background:#8f887c;"></span>
+                <span class="color-chip" style="background:#b5ae9f;"></span>
+                <span class="color-chip" style="background:#ffffff;"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Family 4 -->
+          <article class="color-palette-card rv rv-delay-3">
+            <div class="color-palette-photo">
+              <img src="images/g4.jpg" alt="Light contemporary board and batten home">
+            </div>
+            <div class="color-palette-info">
+              <h4>Light Contemporary</h4>
+              <p>Chalk white board &amp; batten paired with natural wood porch posts and black metal accents.</p>
+              <div class="color-chips-row">
+                <span class="color-chip" style="background:#ecefe6;"></span>
+                <span class="color-chip" style="background:#222624;"></span>
+                <span class="color-chip" style="background:#996b42;"></span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         9. MATCH MATERIAL TO HOME STYLE
+         ==================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow rv">Architectural Guidance</span>
+          <h2 class="section-title rv rv-delay-1">Matching material to home architecture.</h2>
+          <p class="section-sub rv rv-delay-2">Every home silhouette suggests specific proportions, shadow lines, and material pairings. Here is how our specialists guide selection.</p>
+        </div>
+
+        <div class="home-styles-grid">
+          <article class="home-style-card rv">
+            <div class="home-style-thumb">
+              <img src="images/arch_hero.jpg" alt="Modern contemporary architectural siding">
+            </div>
+            <div class="home-style-content">
+              <h4>Modern &amp; Contemporary</h4>
+              <p>Geometric volumes benefit from wide-panel fiber cement or vertical cedar reveals with concealed trim.</p>
+              <div class="home-style-rec">Suggested: Fiber Cement + Cedar Accents</div>
+            </div>
+          </article>
+
+          <article class="home-style-card rv rv-delay-1">
+            <div class="home-style-thumb">
+              <img src="images/craftsmanship.jpg" alt="Craftsman home architectural trim and siding">
+            </div>
+            <div class="home-style-content">
+              <h4>Craftsman &amp; Bungalow</h4>
+              <p>Requires horizontal lap siding with substantial corner casings, flared eaves, and organic wood trim.</p>
+              <div class="home-style-rec">Suggested: Fiber Cement Lap or Cedar Shingle</div>
+            </div>
+          </article>
+
+          <article class="home-style-card rv rv-delay-2">
+            <div class="home-style-thumb">
+              <img src="images/after.jpg" alt="Modern farmhouse exterior with vertical siding">
+            </div>
+            <div class="home-style-content">
+              <h4>Modern Farmhouse</h4>
+              <p>Defined by tall vertical board and batten siding, high contrast black accents, and deep porch overhangs.</p>
+              <div class="home-style-rec">Suggested: Vertical Vinyl or Fiber Cement</div>
+            </div>
+          </article>
+
+          <article class="home-style-card rv rv-delay-3">
+            <div class="home-style-thumb">
+              <img src="images/hero.jpg" alt="Traditional colonial residential home">
+            </div>
+            <div class="home-style-content">
+              <h4>Traditional Colonial</h4>
+              <p>Balanced symmetrical elevations suited to classic 4-inch horizontal lap with dentil moldings and wide frieze boards.</p>
+              <div class="home-style-rec">Suggested: Insulated Vinyl or Smooth Lap</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         10. INTERACTIVE MATERIAL DECISION GUIDE
+         ==================================================================== -->
+    <section class="section bg-subtle-section" id="decisionGuide">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow rv">Decision Assistant</span>
+          <h2 class="section-title rv rv-delay-1">What matters most for your home?</h2>
+          <p class="section-sub rv rv-delay-2">Select your primary exterior objective to discover materials worth discussing during your on-site consultation.</p>
+        </div>
+
+        <div class="decision-guide-box rv rv-delay-2">
+          <div class="priority-selector-row">
+            <button type="button" class="priority-btn active" data-priority="maintenance">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+              <span>Low Maintenance</span>
+            </button>
+            <button type="button" class="priority-btn" data-priority="durability">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+              <span>Maximum Durability &amp; Fire Safety</span>
+            </button>
+            <button type="button" class="priority-btn" data-priority="natural">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+              <span>Natural Organic Warmth</span>
+            </button>
+            <button type="button" class="priority-btn" data-priority="budget">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+              <span>Strategic Budget Efficiency</span>
+            </button>
+          </div>
+
+          <div class="decision-result-panel" id="decisionResultPanel">
+            <span class="decision-result-badge" id="decisionResultBadge">Recommended Starting Point</span>
+            <div class="decision-result-title" id="decisionResultTitle">Architectural Insulated Vinyl Siding</div>
+            <p class="decision-result-desc" id="decisionResultDesc">
+              For homeowners whose primary concern is zero scraping, no painting cycles, and durable impact resistance, modern insulated vinyl offers high thermal barrier ratings with minimal lifetime upkeep.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         11. INSTALLATION & SUBSTRATE CONSIDERATIONS
+         ==================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow rv">Behind The Siding</span>
+          <h2 class="section-title rv rv-delay-1">Siding is only as good as what’s behind it.</h2>
+          <p class="section-sub rv rv-delay-2">Material selection is half the project. Long-term performance depends completely on weather barriers, flashing, and substrate carpentry.</p>
+        </div>
+
+        <div class="install-considerations-grid">
+          <div class="install-consider-card rv">
+            <h4>01. Substrate Inspection</h4>
+            <p>We inspect plywood sheathing for water damage or rot before fastening, sistering studs where needed.</p>
+          </div>
+          <div class="install-consider-card rv rv-delay-1">
+            <h4>02. Vapor Barriers (WRB)</h4>
+            <p>Vapor-permeable commercial housewrap taped at all seams prevents moisture while letting walls breathe.</p>
+          </div>
+          <div class="install-consider-card rv rv-delay-2">
+            <h4>03. Head Flashings</h4>
+            <p>Custom-bent aluminum drip caps over all windows and doors direct rainwater away from openings.</p>
+          </div>
+          <div class="install-consider-card rv rv-delay-3">
+            <h4>04. Rainscreen Cavity</h4>
+            <p>Where required, vertical furring creates an unobstructed ventilation gap that dries moisture instantly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         12. ARCHITECTURAL DETAIL CALLOUTS
+         ==================================================================== -->
+    <section class="section bg-subtle-section">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow rv">Architectural Blueprint</span>
+          <h2 class="section-title rv rv-delay-1">Five critical design dimensions.</h2>
+          <p class="section-sub rv rv-delay-2">During our material consultation, our specialists evaluate your facade across five essential architectural criteria.</p>
+        </div>
+
+        <div class="blueprint-callouts-grid">
+          <div class="blueprint-card rv">
+            <div class="blueprint-num">01</div>
+            <h4 class="blueprint-title">Texture</h4>
+            <p class="blueprint-text">Selecting matte, brushed, or embossed wood grain suited to your sunlight exposure.</p>
+          </div>
+          <div class="blueprint-card rv rv-delay-1">
+            <div class="blueprint-num">02</div>
+            <h4 class="blueprint-title">Profile</h4>
+            <p class="blueprint-text">Choosing reveal widths (4", 6", 8", or board &amp; batten) to balance wall height.</p>
+          </div>
+          <div class="blueprint-card rv rv-delay-2">
+            <div class="blueprint-num">03</div>
+            <h4 class="blueprint-title">Finish</h4>
+            <p class="blueprint-text">Baked-on ceramic coatings vs. natural stain penetrants tailored to local humidity.</p>
+          </div>
+          <div class="blueprint-card rv rv-delay-3">
+            <div class="blueprint-num">04</div>
+            <h4 class="blueprint-title">Trim</h4>
+            <p class="blueprint-text">Wide architectural corner boards and window casings that ground the facade.</p>
+          </div>
+          <div class="blueprint-card rv rv-delay-4">
+            <div class="blueprint-num">05</div>
+            <h4 class="blueprint-title">Color</h4>
+            <p class="blueprint-text">Harmonizing primary field siding with roofing shingles and masonry foundations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         13. MATERIAL CONSULTATION CTA
+         ==================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="prod-cta-box rv">
+          <span class="eyebrow" style="margin-inline:auto;">Professional Guidance</span>
+          <h2>Not sure which material fits your home?</h2>
+          <p>
+            Schedule a complimentary on-site material consultation. We bring full-size physical siding samples, review wall conditions, and provide detailed itemized estimates.
+          </p>
+          <div style="display:flex;gap:1.25rem;justify-content:center;flex-wrap:wrap;">
+            <a href="about.html#contact-consult" class="btn btn-primary btn-lg">
+              <span>Talk With a Siding Specialist</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="index.html#estimate" class="btn btn-outline btn-lg">
+              <span>Get a Free Estimate</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       14. GLOBAL STANDARD FOOTER
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo" style="color:#ffffff;">
+          <span class="logo-mark">▲</span>
+          <span>Siding<b>Pro</b></span>
+        </a>
+        <p class="footer-desc">
+          Professional residential exterior siding installation contractor. Delivering precision joinery, durable material solutions, and enduring curb appeal for homeowners.
+        </p>
+        <div class="footer-badges">
+          <span class="badge-tag">Licensed &amp; Insured</span>
+          <span class="badge-tag">EPA Lead-Safe Certified</span>
+          <span class="badge-tag">James Hardie Preferred</span>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Platform Pages</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home 1: Transform</a></li>
+          <li><a href="home2.html">Home 2: Studio</a></li>
+          <li><a href="about.html">About: Craftsmanship</a></li>
+          <li><a href="products.html">Products: Showroom</a></li>
+          <li><a href="pricing.html">Pricing: Investment Guide</a></li>
+          <li><a href="gallery.html">Portfolio Gallery</a></li>
+          <li><a href="contact.html">Contact &amp; Estimate</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Materials</h4>
+        <ul class="footer-links">
+          <li><a href="#cement">Engineered Fiber Cement</a></li>
+          <li><a href="#vinyl">Architectural Insulated Vinyl</a></li>
+          <li><a href="#wood">Western Red Cedar</a></li>
+          <li><a href="#comparison">Material Comparison Matrix</a></li>
+          <li><a href="#decisionGuide">Decision Guide</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Contact &amp; Operations</h4>
+        <div class="footer-contact-info">
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <div>
+              <a href="tel:+15550100">(555) 010-0100</a>
+              <div style="font-size:0.8rem;opacity:0.8;">Mon – Sat: 7:00 AM – 6:00 PM</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <div>
+              <a href="mailto:estimates@sidingpro.example">estimates@sidingpro.example</a>
+              <div style="font-size:0.8rem;opacity:0.8;">Guaranteed 24-hr response</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div>
+              <span>4200 Craftsman Way, Suite 100</span>
+              <div style="font-size:0.8rem;opacity:0.8;">Regional Service Operations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>
+        © <span class="current-year">2026</span> SidingPro Contractors LLC. All rights reserved. Registered General Contractor #EXT-99482.
+      </div>
+      <div class="footer-bottom-links">
+        <a href="#mainContent">Privacy Policy</a>
+        <a href="#mainContent">Terms of Service</a>
+        <a href="#comparison">Warranty Details</a>
+        <a href="#mainContent">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       ACCESSIBLE LOGIN MODAL
+       ==================================================================== -->
+  <div class="modal-overlay" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title" id="loginTitle">Client Portal</h3>
+          <p class="modal-sub">Sign in to track your siding project schedule &amp; invoices</p>
+        </div>
+        <button type="button" class="modal-close-btn" aria-label="Close modal">✕</button>
+      </div>
+
+      <div id="loginSuccessMsg" class="form-success-banner" style="display:none;margin-block-end:1rem;">
+        ✓ Authentication successful. Redirecting to client portal...
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Email Address</label>
+          <input type="email" id="loginEmail" class="form-input" required placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" class="form-input" required placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;padding:0.85rem;margin-block-start:0.5rem;">
+          <span>Sign In to Portal</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Unified Global Script Engine -->
+  <script src="script.js"></script>
+</body>
+</html>

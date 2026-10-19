@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore our residential portfolio of fiber cement, natural cedar, and insulated vinyl siding transformations across 20+ architectural case studies.">
+  <meta name="theme-color" content="#1a4231">
+  <title>Exterior Craftsmanship Gallery | SidingPro Architectural Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Standardized Master Site Header -->
+  <header class="site-header">
+    <div class="container-wide header-container">
+      <a href="index.html" class="site-logo" aria-label="SidingPro Home">
+        <span class="logo-mark">▲</span>
+        <span>Siding<b>Pro</b> <span class="tagline-hide" style="font-size:0.75rem;font-weight:500;opacity:0.75;margin-inline-start:4px;">· Craft &amp; Siding</span></span>
+      </a>
+
+      <!-- Standardized Main Navigation (All 7 Pages) -->
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="gallery.html" class="nav-link active" aria-current="page">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Controls: Theme -> RTL -> Login -> Mobile Menu -->
+      <div class="header-actions">
+        <!-- Theme Toggle with SVG Icons -->
+        <button type="button" class="icon-ctrl-btn theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" style="display:none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Direction Toggle (RTL / LTR) -->
+        <button type="button" class="icon-ctrl-btn dir-toggle" aria-label="Toggle text direction LTR/RTL">
+          <span class="dir-toggle-text">RTL</span>
+        </button>
+
+        <!-- Auth Controls: Direct Log In Link -->
+        <a href="login.html" class="btn btn-login">
+          <span>Log In</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button type="button" class="mobile-menu-btn" aria-label="Open mobile navigation" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- ====================================================================
+         1. GALLERY HERO SECTION
+         ==================================================================== -->
+    <section class="gallery-hero">
+      <div class="container rv">
+        <span class="eyebrow">Architectural Portfolio</span>
+        <h1 class="gallery-hero-headline">Residential Exterior <span style="color:var(--brand-accent);">Transformations.</span></h1>
+        <p class="gallery-hero-lead" style="margin-block-end:0;">
+          Explore curated real-world installations showcasing engineered fiber cement, hand-graded Western Red Cedar, and premium insulated vinyl crafted for lifetime resilience and curb appeal.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         2. DEDICATED FILTER & SEARCH TOOLBAR (AFTER HERO)
+         ==================================================================== -->
+    <section class="gallery-toolbar-section" id="galleryToolbar">
+      <div class="container gallery-toolbar-wrap">
+        <!-- Exact Filter Pills -->
+        <div class="gallery-filter-toolbar">
+          <button type="button" class="filter-pill active" data-filter="all">All Projects (20)</button>
+          <button type="button" class="filter-pill" data-filter="cement">Fiber Cement</button>
+          <button type="button" class="filter-pill" data-filter="cedar">Natural Cedar</button>
+          <button type="button" class="filter-pill" data-filter="vinyl">Insulated Vinyl</button>
+          <button type="button" class="filter-pill" data-filter="farmhouse">Modern Farmhouse</button>
+          <button type="button" class="filter-pill" data-filter="shake">Coastal Shake</button>
+        </div>
+
+        <!-- Real-Time Search Bar with Professional SVG Search Icon -->
+        <div class="gallery-search-wrap">
+          <span class="gallery-search-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+          <input type="text" id="gallerySearchInput" class="gallery-search-input" placeholder="Search by material, style, location..." aria-label="Search siding projects">
+          <button type="button" id="gallerySearchClear" class="gallery-search-clear" aria-label="Clear search">✕</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. 4x5 IMAGE CARD GRID (20 CARDS)
+         ==================================================================== -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-grid" id="galleryGrid">
+
+          <!-- Card 01 -->
+          <article class="gallery-card" data-category="farmhouse cement" data-img="images/hero.jpg" data-title="The Hudson Valley Modern" data-specs="Matte Black Board &amp; Batten · 2025" data-loc="Hudson Valley, NY">
+            <div class="gallery-card-img-wrap">
+              <img src="images/hero.jpg" alt="Hudson Valley Modern residence with matte black board and batten siding" loading="lazy">
+              <span class="gallery-card-badge">Fiber Cement</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">The Hudson Valley Modern</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Hudson Valley, NY</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Board &amp; Batten</span>
+                <span class="gallery-spec-pill">Midnight Matte</span>
+                <span class="gallery-spec-pill">2025</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 02 -->
+          <article class="gallery-card" data-category="vinyl" data-img="images/after.jpg" data-title="Greenwich Colonial Revival" data-specs="Polar White Insulated Lap · 2024" data-loc="Greenwich, CT">
+            <div class="gallery-card-img-wrap">
+              <img src="images/after.jpg" alt="Greenwich Colonial Revival with architectural polar white vinyl siding" loading="lazy">
+              <span class="gallery-card-badge">Insulated Vinyl</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Greenwich Colonial Revival</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Greenwich, CT</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">4.5&quot; Dutch Lap</span>
+                <span class="gallery-spec-pill">Polar White</span>
+                <span class="gallery-spec-pill">2024</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 03 -->
+          <article class="gallery-card" data-category="cedar shake" data-img="images/craftsmanship.jpg" data-title="Litchfield Craftsman Estate" data-specs="Clear Western Cedar Shingle · 2024" data-loc="Litchfield County, CT">
+            <div class="gallery-card-img-wrap">
+              <img src="images/craftsmanship.jpg" alt="Litchfield Craftsman Estate featuring hand-cut cedar shingles" loading="lazy">
+              <span class="gallery-card-badge">Western Cedar</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Litchfield Craftsman Estate</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Litchfield County, CT</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Individual Shakes</span>
+                <span class="gallery-spec-pill">Amber Tone</span>
+                <span class="gallery-spec-pill">2024</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 04 -->
+          <article class="gallery-card" data-category="cement" data-img="images/cement.jpg" data-title="Coastal Shoreline Residence" data-specs="Deep Ocean Fiber Cement Lap · 2025" data-loc="Westport, CT">
+            <div class="gallery-card-img-wrap">
+              <img src="images/cement.jpg" alt="Coastal residence clad in deep ocean fiber cement horizontal siding" loading="lazy">
+              <span class="gallery-card-badge">Fiber Cement</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Coastal Shoreline Residence</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Westport, CT</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">7&quot; Reveal Lap</span>
+                <span class="gallery-spec-pill">Deep Ocean</span>
+                <span class="gallery-spec-pill">2025</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 05 -->
+          <article class="gallery-card" data-category="cedar" data-img="images/wood.jpg" data-title="Westchester Contemporary Retreat" data-specs="Clear Vertical Grain Cedar · 2024" data-loc="Bedford, NY">
+            <div class="gallery-card-img-wrap">
+              <img src="images/wood.jpg" alt="Contemporary home exterior with clear vertical cedar siding and black windows" loading="lazy">
+              <span class="gallery-card-badge">Western Cedar</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Westchester Contemporary</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Bedford, NY</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Vertical Channel</span>
+                <span class="gallery-spec-pill">Natural Teak</span>
+                <span class="gallery-spec-pill">2024</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 06 -->
+          <article class="gallery-card" data-category="farmhouse vinyl" data-img="images/vinyl.jpg" data-title="Fairfield Modern Farmhouse" data-specs="Pure White Lap &amp; Dark Fascia · 2025" data-loc="Fairfield, CT">
+            <div class="gallery-card-img-wrap">
+              <img src="images/vinyl.jpg" alt="Modern farmhouse with white vinyl lap siding and architectural trim" loading="lazy">
+              <span class="gallery-card-badge">Insulated Vinyl</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Fairfield Modern Farmhouse</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Fairfield, CT</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Double 4&quot; Lap</span>
+                <span class="gallery-spec-pill">Pure White</span>
+                <span class="gallery-spec-pill">2025</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 07 -->
+          <article class="gallery-card" data-category="cement" data-img="images/g1.jpg" data-title="Stamford Architectural Facade" data-specs="Engineered Charcoal Fiber Cement · 2024" data-loc="Stamford, CT">
+            <div class="gallery-card-img-wrap">
+              <img src="images/g1.jpg" alt="Stamford residence with premium charcoal fiber cement siding" loading="lazy">
+              <span class="gallery-card-badge">Fiber Cement</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Stamford Architectural Facade</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Stamford, CT</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Smooth Reveal</span>
+                <span class="gallery-spec-pill">Iron Gray</span>
+                <span class="gallery-spec-pill">2024</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 08 -->
+          <article class="gallery-card" data-category="cedar" data-img="images/g2.jpg" data-title="Scarsdale Craftsman Overhaul" data-specs="Mitered Corners &amp; Cedar Accent · 2025" data-loc="Scarsdale, NY">
+            <div class="gallery-card-img-wrap">
+              <img src="images/g2.jpg" alt="Scarsdale craftsman home with mitered siding corners and natural cedar" loading="lazy">
+              <span class="gallery-card-badge">Western Cedar</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Scarsdale Craftsman Overhaul</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Scarsdale, NY</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Beveled Clapboard</span>
+                <span class="gallery-spec-pill">Golden Honey</span>
+                <span class="gallery-spec-pill">2025</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 09 -->
+          <article class="gallery-card" data-category="farmhouse" data-img="images/g3.jpg" data-title="New Canaan Mid-Century Reset" data-specs="Horizontal Gray &amp; Warm Accents · 2024" data-loc="New Canaan, CT">
+            <div class="gallery-card-img-wrap">
+              <img src="images/g3.jpg" alt="Mid-century home exterior modernized with clean gray lap siding" loading="lazy">
+              <span class="gallery-card-badge">Modern Farmhouse</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">New Canaan Mid-Century Reset</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> New Canaan, CT</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Horizontal Lap</span>
+                <span class="gallery-spec-pill">Slate Stone</span>
+                <span class="gallery-spec-pill">2024</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 10 -->
+          <article class="gallery-card" data-category="shake vinyl" data-img="images/g4.jpg" data-title="Darien Harbor Shingle Home" data-specs="Engineered Shake &amp; Aluminum Flashing · 2025" data-loc="Darien, CT">
+            <div class="gallery-card-img-wrap">
+              <img src="images/g4.jpg" alt="Darien coastal residence with white shingle cladding" loading="lazy">
+              <span class="gallery-card-badge">Coastal Shake</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Darien Harbor Shingle Home</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Darien, CT</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Staggered Shake</span>
+                <span class="gallery-spec-pill">Oyster Shell</span>
+                <span class="gallery-spec-pill">2025</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 11 -->
+          <article class="gallery-card" data-category="cement" data-img="images/arch_hero.jpg" data-title="Ridgefield Architectural Residence" data-specs="Smooth Charcoal Panels · 2024" data-loc="Ridgefield, CT">
+            <div class="gallery-card-img-wrap">
+              <img src="images/arch_hero.jpg" alt="Ridgefield home with geometric fiber cement panels" loading="lazy">
+              <span class="gallery-card-badge">Fiber Cement</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Ridgefield Architectural Villa</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Ridgefield, CT</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Architectural Panel</span>
+                <span class="gallery-spec-pill">Graphite</span>
+                <span class="gallery-spec-pill">2024</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 12 -->
+          <article class="gallery-card" data-category="cement farmhouse" data-img="images/arch_detail.jpg" data-title="Westport Transitional Estate" data-specs="Cobblestone Gray Lap Siding · 2025" data-loc="Westport, CT">
+            <div class="gallery-card-img-wrap">
+              <img src="images/arch_detail.jpg" alt="Detail of precision corner trim and fiber cement siding" loading="lazy">
+              <span class="gallery-card-badge">Fiber Cement</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Westport Transitional Estate</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Westport, CT</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Cedarmill Lap</span>
+                <span class="gallery-spec-pill">Cobble Stone</span>
+                <span class="gallery-spec-pill">2025</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 13 (Initially Hidden - Revealed via View More) -->
+          <article class="gallery-card is-hidden" data-category="cedar" data-img="images/cta.jpg" data-title="Bedford Stone &amp; Cedar Haven" data-specs="Natural Beveled Siding &amp; Stone · 2024" data-loc="Bedford Hills, NY">
+            <div class="gallery-card-img-wrap">
+              <img src="images/cta.jpg" alt="Bedford home with natural beveled cedar siding and fieldstone accents" loading="lazy">
+              <span class="gallery-card-badge">Western Cedar</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Bedford Stone &amp; Cedar Haven</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Bedford Hills, NY</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Beveled Lap</span>
+                <span class="gallery-spec-pill">Warm Cedar</span>
+                <span class="gallery-spec-pill">2024</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 14 (Initially Hidden) -->
+          <article class="gallery-card is-hidden" data-category="vinyl" data-img="images/before.jpg" data-title="Wilton Heritage Complete Reset" data-specs="Full Thermal Foam Vinyl · 2025" data-loc="Wilton, CT">
+            <div class="gallery-card-img-wrap">
+              <img src="images/before.jpg" alt="Wilton home before and after complete exterior cladding replacement" loading="lazy">
+              <span class="gallery-card-badge">Insulated Vinyl</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Wilton Heritage Reset</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Wilton, CT</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Neopor Contoured</span>
+                <span class="gallery-spec-pill">Sagebrook</span>
+                <span class="gallery-spec-pill">2025</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 15 (Initially Hidden) -->
+          <article class="gallery-card is-hidden" data-category="vinyl shake" data-img="images/g4.jpg" data-title="Norwalk Coastal Harbor Home" data-specs="Weathered Blue Shake &amp; Trim · 2024" data-loc="Norwalk, CT">
+            <div class="gallery-card-img-wrap">
+              <img src="images/g4.jpg" alt="Coastal home with slate blue shake siding" loading="lazy">
+              <span class="gallery-card-badge">Coastal Shake</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Norwalk Coastal Harbor Home</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Norwalk, CT</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Composite Shake</span>
+                <span class="gallery-spec-pill">Coastal Slate</span>
+                <span class="gallery-spec-pill">2024</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 16 (Initially Hidden) -->
+          <article class="gallery-card is-hidden" data-category="cedar" data-img="images/wood.jpg" data-title="Pound Ridge Woodland Lodge" data-specs="Dark Espresso Cedar Shiplap · 2025" data-loc="Pound Ridge, NY">
+            <div class="gallery-card-img-wrap">
+              <img src="images/wood.jpg" alt="Woodland lodge with dark stained cedar shiplap" loading="lazy">
+              <span class="gallery-card-badge">Western Cedar</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Pound Ridge Woodland Lodge</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Pound Ridge, NY</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Shiplap Reveal</span>
+                <span class="gallery-spec-pill">Espresso Stain</span>
+                <span class="gallery-spec-pill">2025</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 17 (Initially Hidden) -->
+          <article class="gallery-card is-hidden" data-category="farmhouse cement" data-img="images/hero.jpg" data-title="Armonk Modern Gable Residence" data-specs="Crisp Khaki Lap &amp; Black Gutters · 2024" data-loc="Armonk, NY">
+            <div class="gallery-card-img-wrap">
+              <img src="images/hero.jpg" alt="Modern gable residence with crisp siding and architectural trim" loading="lazy">
+              <span class="gallery-card-badge">Modern Farmhouse</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Armonk Modern Gable Home</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Armonk, NY</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Vertical Battens</span>
+                <span class="gallery-spec-pill">Khaki Matte</span>
+                <span class="gallery-spec-pill">2024</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 18 (Initially Hidden) -->
+          <article class="gallery-card is-hidden" data-category="cement" data-img="images/cement.jpg" data-title="Chappaqua Minimalist Pavilion" data-specs="Square Fiber Cement Grid · 2025" data-loc="Chappaqua, NY">
+            <div class="gallery-card-img-wrap">
+              <img src="images/cement.jpg" alt="Chappaqua residence with minimalist geometric fiber cement panels" loading="lazy">
+              <span class="gallery-card-badge">Fiber Cement</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Chappaqua Minimalist Pavilion</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Chappaqua, NY</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Reveal Panels</span>
+                <span class="gallery-spec-pill">Pearl Gray</span>
+                <span class="gallery-spec-pill">2025</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 19 (Initially Hidden) -->
+          <article class="gallery-card is-hidden" data-category="shake cedar" data-img="images/craftsmanship.jpg" data-title="Rye Coastal Shingle Villa" data-specs="Weathered Gray Western Cedar · 2024" data-loc="Rye, NY">
+            <div class="gallery-card-img-wrap">
+              <img src="images/craftsmanship.jpg" alt="Rye coastal home with weathered cedar shingles" loading="lazy">
+              <span class="gallery-card-badge">Coastal Shake</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Rye Coastal Shingle Villa</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Rye, NY</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Hand-Hewn Shake</span>
+                <span class="gallery-spec-pill">Silver Drift</span>
+                <span class="gallery-spec-pill">2024</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 20 (Initially Hidden) -->
+          <article class="gallery-card is-hidden" data-category="farmhouse vinyl" data-img="images/vinyl.jpg" data-title="Harrison Architectural Showcase" data-specs="Monolithic Midnight Vertical Siding · 2025" data-loc="Harrison, NY">
+            <div class="gallery-card-img-wrap">
+              <img src="images/vinyl.jpg" alt="Harrison residence showcasing monolithic exterior siding craftsmanship" loading="lazy">
+              <span class="gallery-card-badge">Insulated Vinyl</span>
+              <span class="gallery-card-overlay-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            </div>
+            <div class="gallery-card-body">
+              <h2 class="gallery-card-title">Harrison Showcase Home</h2>
+              <div class="gallery-card-location"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Harrison, NY</div>
+              <div class="gallery-card-specs">
+                <span class="gallery-spec-pill">Vertical Siding</span>
+                <span class="gallery-spec-pill">Midnight Black</span>
+                <span class="gallery-spec-pill">2025</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Centered View More Action Button -->
+        <div class="gallery-actions rv">
+          <button type="button" class="btn btn-primary btn-lg" id="viewMoreGalleryBtn">
+            <span>View More Projects</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="gallery-counter-label" id="galleryCounterLabel">Showing 12 of 20 Projects</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. PROJECT CONSULTATION CTA
+         ==================================================================== -->
+    <section class="section bg-subtle-section">
+      <div class="container text-center rv">
+        <span class="eyebrow">Ready for Your Transformation?</span>
+        <h2>Bring this level of craftsmanship to your home.</h2>
+        <p style="max-width:54ch;margin-inline:auto;margin-block-end:2rem;color:var(--text-muted);">
+          Our regional siding consultants conduct complete 3D surface measurements and provide itemized estimates with material samples delivered directly to your door.
+        </p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary">
+            <span>Request In-Home Consultation</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="products.html" class="btn btn-outline">
+            <span>Explore Material Catalog</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+         GLOBAL FOOTER
+         ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo">
+          <span class="logo-mark">▲</span>
+          <span>Siding<b>Pro</b></span>
+        </a>
+        <p style="margin-block-start:1rem;font-size:0.92rem;line-height:1.55;color:#a0ada6;">
+          Exterior siding installation company serving Westchester, Fairfield, and regional counties with licensed craftsmanship and lifetime warranties.
+        </p>
+        <div class="footer-badges">
+          <span class="badge-tag">James Hardie Elite</span>
+          <span class="badge-tag">EPA Lead-Safe</span>
+          <span class="badge-tag">A+ BBB Rated</span>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Platform Pages</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home 1: Transform</a></li>
+          <li><a href="home2.html">Home 2: Studio</a></li>
+          <li><a href="about.html">About: Craftsmanship</a></li>
+          <li><a href="products.html">Products: Showroom</a></li>
+          <li><a href="pricing.html">Pricing: Investment Guide</a></li>
+          <li><a href="gallery.html">Portfolio Gallery</a></li>
+          <li><a href="contact.html">Contact &amp; Estimate</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Cladding Materials</h4>
+        <ul class="footer-links">
+          <li><a href="products.html#vinylShowcase">Insulated Vinyl Siding</a></li>
+          <li><a href="products.html#cementShowcase">Engineered Fiber Cement</a></li>
+          <li><a href="products.html#cedarShowcase">Western Red Cedar</a></li>
+          <li><a href="products.html#comparison">Material Comparison</a></li>
+          <li><a href="products.html#decisionGuide">Material Decision Guide</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Regional Operations</h4>
+        <div class="footer-contact-info">
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <div>
+              <span>(555) 010-0100</span>
+              <div style="font-size:0.8rem;opacity:0.8;">Mon–Fri 7:00 AM – 6:00 PM</div>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div>
+              <span>4200 Craftsman Way, Suite 100</span>
+              <div style="font-size:0.8rem;opacity:0.8;">Regional Service Operations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>
+        © <span class="current-year">2026</span> SidingPro Contractors LLC. All rights reserved. Registered General Contractor #EXT-99482.
+      </div>
+      <div class="footer-bottom-links">
+        <a href="#mainContent">Privacy Policy</a>
+        <a href="#mainContent">Terms of Service</a>
+        <a href="#mainContent">Warranty Details</a>
+        <a href="#mainContent">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       INTERACTIVE GALLERY LIGHTBOX MODAL
+       ==================================================================== -->
+  <div class="lightbox-modal" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Project photo lightbox" aria-hidden="true">
+    <div class="lightbox-dialog">
+      <div style="position:absolute;inset-block-start:1rem;inset-inline-end:1rem;z-index:10;">
+        <button type="button" class="modal-close-btn" id="closeLightboxBtn" aria-label="Close photo preview">✕</button>
+      </div>
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="images/hero.jpg" alt="Enlarged project view">
+      </div>
+      <div class="lightbox-details">
+        <div>
+          <h3 id="lightboxTitle" style="font-size:1.35rem;font-weight:700;margin-block-end:0.25rem;">Project Title</h3>
+          <p id="lightboxSpecs" style="color:var(--text-muted);font-size:0.9rem;margin:0;">Specs and location details</p>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-sm">
+          <span>Inquire About This Style</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       ACCESSIBLE LOGIN MODAL
+       ==================================================================== -->
+  <div class="modal-overlay" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title" id="loginTitle">Client Portal</h3>
+          <p class="modal-sub">Sign in to track your siding project schedule &amp; invoices</p>
+        </div>
+        <button type="button" class="modal-close-btn" aria-label="Close modal">✕</button>
+      </div>
+
+      <div id="loginSuccessMsg" class="form-success-banner" style="display:none;margin-block-end:1rem;">
+        ✓ Authentication successful. Redirecting to client portal...
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Email Address</label>
+          <input type="email" id="loginEmail" class="form-input" required placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" class="form-input" required placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;padding:0.85rem;margin-block-start:0.5rem;">
+          <span>Sign In to Portal</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Master Unified Script Engine -->
+  <script src="script.js"></script>
+</body>
+</html>
