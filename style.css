@@ -1007,7 +1007,8 @@ html.js-ready .rv.is-in {
   color: #ffffff;
   overflow: hidden;
   background-color: #0d1511;
-  padding-block: 5.5rem 3.5rem;
+  padding-block: clamp(5.5rem, 9vh, 7rem) clamp(2.5rem, 5vh, 4rem);
+  box-sizing: border-box;
 }
 
 .hero-bg {
@@ -1022,19 +1023,34 @@ html.js-ready .rv.is-in {
 .shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(8, 35, 29, 0.88) 0%, rgba(8, 35, 29, 0.65) 40%, rgba(8, 35, 29, 0.18) 68%, rgba(8, 35, 29, 0.04) 100%);
+  background: linear-gradient(90deg, rgba(8, 35, 29, 0.92) 0%, rgba(8, 35, 29, 0.72) 42%, rgba(8, 35, 29, 0.22) 70%, rgba(8, 35, 29, 0.05) 100%);
   z-index: 1;
   pointer-events: none;
 }
 
 [dir="rtl"] .shade {
-  background: linear-gradient(270deg, rgba(8, 35, 29, 0.88) 0%, rgba(8, 35, 29, 0.65) 40%, rgba(8, 35, 29, 0.18) 68%, rgba(8, 35, 29, 0.04) 100%);
+  background: linear-gradient(270deg, rgba(8, 35, 29, 0.92) 0%, rgba(8, 35, 29, 0.72) 42%, rgba(8, 35, 29, 0.22) 70%, rgba(8, 35, 29, 0.05) 100%);
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
 }
 
 .hero-c {
   position: relative;
   z-index: 2;
-  max-width: 680px;
+  max-width: 620px;
+  margin-inline-start: 0;
+  margin-inline-end: auto;
+  text-align: start;
+}
+
+[dir="rtl"] .hero-c {
+  margin-inline-start: auto;
+  margin-inline-end: 0;
+  text-align: start;
 }
 
 .hero h1 {
@@ -1043,7 +1059,7 @@ html.js-ready .rv.is-in {
   color: #ffffff;
   max-width: 16ch;
   line-height: 1.1;
-  margin-block-end: 1rem;
+  margin-block-end: 0.85rem;
 }
 
 .hero .em {
@@ -1054,7 +1070,7 @@ html.js-ready .rv.is-in {
   font-size: clamp(1.02rem, 1.5vw, 1.2rem);
   color: #d1ded7;
   max-width: 52ch;
-  margin-block-end: 1.75rem;
+  margin-block-end: 1.5rem;
   line-height: 1.55;
 }
 
@@ -1062,15 +1078,15 @@ html.js-ready .rv.is-in {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-block-end: 2rem;
+  margin-block-end: 1.75rem;
 }
 
 .hero-stats {
   display: flex;
-  gap: 3rem;
+  gap: clamp(1.75rem, 3.5vw, 3rem);
   flex-wrap: wrap;
   border-block-start: 1px solid rgba(255, 255, 255, 0.15);
-  padding-block-start: 1.5rem;
+  padding-block-start: 1.25rem;
 }
 
 .hero-stats .stat-item {
@@ -1090,6 +1106,7 @@ html.js-ready .rv.is-in {
 .hero-stats .stat-label {
   font-size: 0.85rem;
   color: #c1ccc6;
+  white-space: nowrap;
 }
 
 .hero-scroll-prompt {
@@ -1121,7 +1138,7 @@ html.js-ready .rv.is-in {
    ========================================================================== */
 .hero-material-selector {
   position: absolute;
-  inset-block-end: 3rem;
+  inset-block-end: clamp(2.5rem, 5vh, 4rem);
   inset-inline-end: clamp(1.5rem, 4vw, 4rem);
   z-index: 10;
   display: flex;
@@ -1318,6 +1335,14 @@ html.js-ready .rv.is-in {
 }
 
 @media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    height: auto;
+    min-height: 100vh;
+  }
+
   .hero-material-selector {
     position: relative;
     inset-block-end: auto;
