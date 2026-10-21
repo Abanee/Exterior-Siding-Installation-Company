@@ -2381,7 +2381,7 @@ html.js-ready .rv.is-in {
 /* Home 2 Philosophy */
 .philosophy-grid {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
+  grid-template-columns: 1.15fr 0.95fr;
   gap: 4.5rem;
   align-items: stretch;
 }
@@ -2428,17 +2428,20 @@ html.js-ready .rv.is-in {
 
 .philosophy-image-wrap {
   height: 100%;
-  min-height: 100%;
+  max-height: 100%;
+  min-height: 0;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border-subtle);
   display: flex;
+  align-self: stretch;
 }
 
 .philosophy-image-wrap img {
   width: 100%;
   height: 100%;
+  max-height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -3169,7 +3172,8 @@ html.js-ready .rv.is-in {
 .about-hero-lead {
   font-size: clamp(1.1rem, 1.8vw, 1.25rem);
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
   max-width: 720px;
   margin-inline: auto;
   margin-block-end: 2rem;
@@ -3811,13 +3815,17 @@ html.js-ready .rv.is-in {
   border: 1px solid var(--border-subtle);
   background-color: var(--bg-subtle);
   aspect-ratio: 16/10;
-  height: 320px;
+  width: 100%;
+  height: auto;
+  min-height: 240px;
+  display: flex;
 }
 
 .gallery-masonry-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform var(--transition-medium);
 }
 
@@ -4076,9 +4084,13 @@ html.js-ready .rv.is-in {
   }
 
   .philosophy-image-wrap {
-    height: 380px;
+    height: 360px;
+    max-height: 380px;
     min-height: unset;
     aspect-ratio: 16/10;
+    width: 100%;
+    max-width: 620px;
+    margin-inline: auto;
   }
 
   .materials-editorial {
@@ -4110,7 +4122,16 @@ html.js-ready .rv.is-in {
   }
 
   .textures-grid {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .texture-card {
+    flex: 0 1 calc(33.333% - 1.25rem);
+    min-width: 240px;
+    max-width: 320px;
   }
 
   .monument-visual-grid {
@@ -4204,18 +4225,43 @@ html.js-ready .rv.is-in {
   }
 
   .journey-flow {
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-block-start: 2.5rem;
+  }
+
+  .journey-step-card {
+    flex: 0 1 calc(50% - 1rem);
+    min-width: 280px;
+    max-width: 460px;
   }
 
   .trust-principles-grid {
     grid-template-columns: 1fr 1fr;
   }
 
+  .masonry-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .gallery-masonry-item {
+    width: 100%;
+    aspect-ratio: 16/10;
+    height: auto;
+    min-height: 240px;
+  }
+
   .gallery-masonry-item.span-7,
   .gallery-masonry-item.span-5,
   .gallery-masonry-item.span-4,
   .gallery-masonry-item.span-8 {
-    grid-column: span 6;
+    grid-column: span 1;
   }
 
   .commitment-block {
@@ -4310,7 +4356,16 @@ html.js-ready .rv.is-in {
   }
 
   .textures-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .texture-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
   }
 
   .timeline-architectural {
@@ -4370,7 +4425,16 @@ html.js-ready .rv.is-in {
   }
 
   .journey-flow {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .journey-step-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
   }
 
   .trust-principles-grid {
@@ -4462,7 +4526,8 @@ html.js-ready .rv.is-in {
 
 .prod-hero-lead {
   font-size: clamp(1.1rem, 1.8vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
   line-height: 1.65;
   max-width: 720px;
   margin-inline: auto;
@@ -5198,7 +5263,16 @@ html.js-ready .rv.is-in {
   }
 
   .blueprint-callouts-grid {
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .blueprint-card {
+    flex: 0 1 calc(50% - 1rem);
+    min-width: 280px;
+    max-width: 440px;
   }
 }
 
@@ -5209,9 +5283,20 @@ html.js-ready .rv.is-in {
 
   .color-inspiration-grid,
   .home-styles-grid,
-  .install-considerations-grid,
-  .blueprint-callouts-grid {
+  .install-considerations-grid {
     grid-template-columns: 1fr;
+  }
+
+  .blueprint-callouts-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blueprint-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
   }
 
   .mat-spec-matrix {
@@ -5260,7 +5345,8 @@ html.js-ready .rv.is-in {
 
 .gallery-hero-lead {
   font-size: clamp(1.1rem, 1.8vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
   max-width: 68ch;
   margin-inline: auto;
   margin-block-end: 0;
@@ -5541,7 +5627,8 @@ html.js-ready .rv.is-in {
 
 .contact-hero-lead {
   font-size: clamp(1.1rem, 1.8vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
   max-width: 68ch;
   margin-inline: auto;
   margin-block-end: 2rem;
@@ -5584,18 +5671,20 @@ html.js-ready .rv.is-in {
 .contact-layout-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 3rem;
-  align-items: start;
+  gap: 2.5rem;
+  align-items: stretch;
 }
 
 .contact-form-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
-  padding: 2.25rem 2.25rem;
+  padding: 2.25rem;
   box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .contact-form-guarantees {
@@ -5628,14 +5717,19 @@ html.js-ready .rv.is-in {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  height: 100%;
 }
 
 .info-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
-  padding: 1.75rem 1.85rem;
+  padding: 1.85rem;
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  flex: 1.1;
+  justify-content: space-between;
 }
 
 /* Contact Social Media Connect Card */
@@ -5643,10 +5737,12 @@ html.js-ready .rv.is-in {
   background: var(--bg-surface);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
-  padding: 1.75rem 1.85rem;
+  padding: 1.85rem;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
+  flex: 0.9;
+  justify-content: space-between;
 }
 
 .contact-social-grid {
@@ -5821,14 +5917,14 @@ html.js-ready .rv.is-in {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .contact-layout-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 }
 
@@ -5889,7 +5985,8 @@ html.js-ready .rv.is-in {
 
 .pricing-hero-lead {
   font-size: clamp(1.1rem, 1.8vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
   line-height: 1.65;
   max-width: 720px;
   margin-inline: auto;
@@ -5902,6 +5999,15 @@ html.js-ready .rv.is-in {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+/* Universal High-Contrast Paragraph Color for Dark Hero Sections */
+.about-hero p,
+.prod-hero p,
+.gallery-hero p,
+.contact-hero p,
+.pricing-hero p {
+  color: #ffffff;
 }
 
 /* Technical Line Drawing & Cost Illustration Mockup */
@@ -6660,9 +6766,21 @@ html.js-ready .rv.is-in {
     gap: 2.5rem;
   }
 
-  .drivers-grid,
-  .mat-cost-grid {
+  .drivers-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mat-cost-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .mat-cost-card {
+    flex: 0 1 calc(50% - 1rem);
+    min-width: 280px;
+    max-width: 440px;
   }
 
   .transparency-grid,
@@ -6678,12 +6796,23 @@ html.js-ready .rv.is-in {
 
 @media (max-width: 640px) {
   .drivers-grid,
-  .mat-cost-grid,
   .transparency-grid,
   .scenarios-grid,
   .estimate-steps-grid,
   .pipeline-grid {
     grid-template-columns: 1fr;
+  }
+
+  .mat-cost-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mat-cost-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
   }
 
   .quiz-container-box,
@@ -6835,15 +6964,15 @@ html.js-ready .rv.is-in {
   justify-content: center;
 }
 
-/* Auth Floating Top Controls (Top Right) */
+/* Auth Top Controls (Top Right - Non-Sticky) */
 .auth-top-controls-floating {
-  position: fixed;
+  position: absolute;
   inset-block-start: 1.5rem;
   inset-inline-end: 1.75rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  z-index: 1000;
+  z-index: 100;
 }
 
 [dir="rtl"] .auth-top-controls-floating {
