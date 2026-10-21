@@ -163,8 +163,8 @@
       drawer.innerHTML = `
         <div style="display:flex;align-items:center;justify-content:space-between;margin-block-end:1.5rem;padding-block-end:1rem;border-block-end:1px solid var(--border-subtle);">
           <div class="site-logo" style="font-size:1.15rem;">
-            <span class="logo-mark" style="width:28px;height:28px;font-size:0.9rem;">▲</span>
-            <span>Siding<b>Pro</b></span>
+            <img src="images/Logo.png" alt="SidingPro Logo" class="site-logo-img" style="height:30px;width:auto;">
+            <span class="site-logo-text">Siding<b>Pro</b></span>
           </div>
           <button type="button" class="drawer-close-btn" aria-label="Close navigation" style="background:var(--bg-subtle);border:1px solid var(--border-subtle);width:32px;height:32px;border-radius:var(--radius-full);font-size:0.9rem;cursor:pointer;color:var(--text-main);display:grid;place-items:center;">✕</button>
         </div>
