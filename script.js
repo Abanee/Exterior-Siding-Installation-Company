@@ -82,18 +82,6 @@
     const current = html.getAttribute('dir') || 'ltr';
     const next = current === 'rtl' ? 'ltr' : 'rtl';
     applyDir(next);
-
-    // Ensure any open drawer is reset cleanly when switching modes
-    const drawer = document.querySelector('.mobile-drawer');
-    const backdrop = document.querySelector('.drawer-backdrop');
-    const mobileBtn = document.querySelector('.mobile-menu-btn');
-    if (drawer) drawer.classList.remove('is-open');
-    if (backdrop) backdrop.classList.remove('is-open');
-    if (mobileBtn) {
-      mobileBtn.classList.remove('is-active');
-      mobileBtn.setAttribute('aria-expanded', 'false');
-    }
-    document.body.style.overflow = '';
   };
 
   // Immediate direction application
@@ -172,46 +160,69 @@
         <nav class="drawer-nav-list" aria-label="Mobile Navigation">
           <a href="index.html" class="drawer-nav-link ${isHome1 ? 'active' : ''}">
             <span>Home</span>
-            <span style="font-size:0.8rem;opacity:0.6;">01</span>
           </a>
           <a href="home2.html" class="drawer-nav-link ${isHome2 ? 'active' : ''}">
             <span>Home 2</span>
-            <span style="font-size:0.8rem;opacity:0.6;">02</span>
           </a>
           <a href="about.html" class="drawer-nav-link ${isAbout ? 'active' : ''}">
             <span>About</span>
-            <span style="font-size:0.8rem;opacity:0.6;">03</span>
           </a>
           <a href="products.html" class="drawer-nav-link ${isProducts ? 'active' : ''}">
             <span>Products</span>
-            <span style="font-size:0.8rem;opacity:0.6;">04</span>
           </a>
           <a href="pricing.html" class="drawer-nav-link ${isPricing ? 'active' : ''}">
             <span>Pricing</span>
-            <span style="font-size:0.8rem;opacity:0.6;">05</span>
           </a>
           <a href="gallery.html" class="drawer-nav-link ${isGallery ? 'active' : ''}">
             <span>Gallery</span>
-            <span style="font-size:0.8rem;opacity:0.6;">06</span>
           </a>
           <a href="contact.html" class="drawer-nav-link ${isContact ? 'active' : ''}">
             <span>Contact</span>
-            <span style="font-size:0.8rem;opacity:0.6;">07</span>
           </a>
         </nav>
 
-        <div style="margin-block-start:auto;padding-block-start:1.5rem;border-block-start:1px solid var(--border-subtle);display:flex;flex-direction:column;gap:0.75rem;">
-          <a href="login.html" class="btn btn-login" style="text-align:center;width:100%;">
+        <div style="margin-block-start:auto;padding-block-start:1.5rem;border-block-start:1px solid var(--border-subtle);display:flex;flex-direction:column;gap:1rem;">
+          <div class="drawer-controls-row">
+            <!-- Exact Desktop Theme Toggle -->
+            <button type="button" class="icon-ctrl-btn theme-toggle" aria-label="Toggle theme">
+              <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="icon-sun" style="display:none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+
+            <!-- Exact Desktop Direction Toggle -->
+            <button type="button" class="icon-ctrl-btn dir-toggle" aria-label="Toggle text direction LTR/RTL">
+              <span class="dir-toggle-text">RTL</span>
+            </button>
+          </div>
+          <a href="login.html" class="btn btn-login" style="text-align:center;width:100%;font-weight:700;">
             <span>Log In</span>
-          </a>
-          <a href="tel:+15550100" class="btn btn-primary btn-sm" style="width:100%;">
-            <span>Call (555) 010-0100</span>
           </a>
         </div>
       `;
 
       document.body.appendChild(backdrop);
       document.body.appendChild(drawer);
+
+      drawer.querySelectorAll('.theme-toggle').forEach(btn => {
+        btn.addEventListener('click', toggleTheme);
+      });
+      drawer.querySelectorAll('.dir-toggle').forEach(btn => {
+        btn.addEventListener('click', toggleDir);
+      });
+      applyTheme(html.getAttribute('data-theme') || 'light');
+      applyDir(html.getAttribute('dir') || 'ltr');
 
       const drawerCloseBtn = drawer.querySelector('.drawer-close-btn');
       if (drawerCloseBtn) {
