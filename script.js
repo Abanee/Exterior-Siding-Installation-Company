@@ -942,5 +942,40 @@
         });
       });
     }
+
+    // --- 20. HOME 2 COLOR & EXTERIOR PALETTE STUDIO CONTROLLER ---
+    const studioSwatches = document.querySelectorAll('.swatch-item-btn');
+    const studioOverlay = document.getElementById('studioColorOverlay');
+    const studioBadge = document.getElementById('studioBadge');
+
+    const schemePalettes = {
+      charcoal: { color: '#2a3135', name: 'Charcoal + Crisp White Trim', opacity: 0.45 },
+      warmgray: { color: '#706b63', name: 'Warm Gray + Natural Cedar', opacity: 0.42 },
+      deepgreen: { color: '#223c2e', name: 'Deep Woodland Green + Cream', opacity: 0.5 },
+      softsand: { color: '#9f917b', name: 'Soft Sand + Dark Bronze Trim', opacity: 0.4 },
+      classicwhite: { color: '#f5f6f2', name: 'Classic Farmhouse White + Black Accents', opacity: 0.25 }
+    };
+
+    if (studioSwatches.length > 0 && (studioOverlay || studioBadge)) {
+      studioSwatches.forEach(btn => {
+        btn.addEventListener('click', () => {
+          studioSwatches.forEach(b => b.classList.remove('is-active'));
+          btn.classList.add('is-active');
+
+          const schemeKey = btn.getAttribute('data-scheme');
+          const data = schemePalettes[schemeKey];
+
+          if (data) {
+            if (studioOverlay) {
+              studioOverlay.style.backgroundColor = data.color;
+              studioOverlay.style.opacity = data.opacity;
+            }
+            if (studioBadge) {
+              studioBadge.textContent = data.name;
+            }
+          }
+        });
+      });
+    }
   });
 })();

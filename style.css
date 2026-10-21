@@ -2285,7 +2285,13 @@ html.js-ready .rv.is-in {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
   gap: 4.5rem;
-  align-items: center;
+  align-items: stretch;
+}
+
+.philosophy-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .philosophy-lead {
@@ -2323,17 +2329,21 @@ html.js-ready .rv.is-in {
 }
 
 .philosophy-image-wrap {
-  aspect-ratio: 4/3;
+  height: 100%;
+  min-height: 100%;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border-subtle);
+  display: flex;
 }
 
 .philosophy-image-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* Home 2 Materials Editorial */
@@ -2478,8 +2488,8 @@ html.js-ready .rv.is-in {
 .color-studio-wrap {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
-  gap: 3rem;
-  align-items: center;
+  gap: 2.5rem;
+  align-items: stretch;
   background: var(--bg-surface);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
@@ -2490,16 +2500,20 @@ html.js-ready .rv.is-in {
 
 .studio-canvas {
   position: relative;
-  aspect-ratio: 16/10;
+  height: 100%;
+  min-height: 480px;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--border-subtle);
+  display: flex;
 }
 
 .studio-canvas img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .studio-canvas-overlay {
@@ -2528,7 +2542,9 @@ html.js-ready .rv.is-in {
 .swatch-selector-panel {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  justify-content: space-between;
+  gap: 0.85rem;
+  height: 100%;
 }
 
 .swatch-item-btn {
@@ -2909,35 +2925,84 @@ html.js-ready .rv.is-in {
   font-size: 1.05rem;
 }
 
-/* Home 2 Monument */
-.expertise-monument {
+/* Home 2 Four Pillars Image-Based Grid */
+.monument-visual-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2.5rem;
-  margin-block-start: 3rem;
-  border-block: 1px solid var(--border-subtle);
-  padding-block: 3.5rem;
+  gap: 1.75rem;
+  margin-block-start: 2.5rem;
 }
 
-.monument-item {
+.pillar-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
-.monument-word {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 3.8vw, 3.2rem);
+.pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--brand-accent);
+}
+
+.pillar-card-media {
+  position: relative;
+  aspect-ratio: 16/11;
+  overflow: hidden;
+  background: var(--bg-subtle);
+}
+
+.pillar-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.pillar-card:hover .pillar-card-media img {
+  transform: scale(1.06);
+}
+
+.pillar-card-step {
+  position: absolute;
+  inset-block-start: 0.85rem;
+  inset-inline-start: 0.85rem;
+  background: rgba(18, 24, 21, 0.85);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: -0.03em;
-  color: var(--text-main);
-  line-height: 1;
-  margin-block-end: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.monument-sub {
-  font-size: 0.9rem;
+.pillar-card-body {
+  padding: 1.5rem 1.35rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.pillar-card-body h3 {
+  font-size: 1.2rem;
+  margin-block-end: 0.5rem;
+  color: var(--text-main);
+}
+
+.pillar-card-body p {
+  font-size: 0.88rem;
   color: var(--text-muted);
-  line-height: 1.5;
+  line-height: 1.55;
+  margin: 0;
 }
 
 /* Home 2 Consultation Split */
@@ -3067,44 +3132,75 @@ html.js-ready .rv.is-in {
   line-height: 1.4;
 }
 
-/* About Story Timeline */
+/* About Story Vertical Timeline */
 .story-timeline-wrap {
   margin-block-start: 3.5rem;
   position: relative;
 }
 
-.story-timeline-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+.story-timeline-vertical {
   position: relative;
+  max-width: 980px;
+  margin-inline: auto;
+  padding-block: 1rem;
 }
 
-.story-timeline-grid::before {
+.story-timeline-vertical::before {
   content: "";
   position: absolute;
-  inset-block-start: 30px;
-  inset-inline: 20px;
-  height: 2px;
-  background: var(--border-strong);
+  inset-block-start: 1rem;
+  inset-block-end: 1rem;
+  inset-inline-start: 50%;
+  width: 2px;
+  background: linear-gradient(180deg, var(--brand-accent) 0%, var(--border-strong) 15%, var(--border-strong) 85%, var(--brand-accent) 100%);
+  transform: translateX(-50%);
   z-index: 1;
 }
 
-.story-stage-card {
-  position: relative;
-  z-index: 2;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-card);
-  border-radius: var(--radius-md);
-  padding: 2rem 1.5rem;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
+[dir="rtl"] .story-timeline-vertical::before {
+  transform: translateX(50%);
 }
 
-.story-stage-step {
-  width: 44px;
-  height: 44px;
+.story-vertical-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  margin-block-end: 3.5rem;
+  z-index: 2;
+}
+
+.story-vertical-item:last-child {
+  margin-block-end: 0;
+}
+
+/* Left vs Right Alternating Content */
+.story-vertical-item:nth-child(odd) .story-vertical-card {
+  grid-column: 1;
+  text-align: end;
+}
+
+.story-vertical-item:nth-child(even) .story-vertical-card {
+  grid-column: 2;
+  text-align: start;
+}
+
+.story-vertical-item:nth-child(odd) .story-vertical-spacer {
+  grid-column: 2;
+}
+
+.story-vertical-item:nth-child(even) .story-vertical-spacer {
+  grid-column: 1;
+}
+
+.story-vertical-node {
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
   border-radius: var(--radius-full);
   background: var(--brand-green);
   color: var(--brand-accent);
@@ -3113,30 +3209,51 @@ html.js-ready .rv.is-in {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.95rem;
-  margin-block-end: 1.5rem;
-  border: 2px solid #ffffff;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 4px var(--border-card), var(--shadow-md);
+  z-index: 3;
+}
+
+[data-theme="dark"] .story-vertical-node {
+  border-color: #121815;
+}
+
+.story-vertical-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 2rem;
   box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
-.story-stage-title {
-  font-size: 1.25rem;
-  margin-block-end: 0.35rem;
+.story-vertical-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--brand-accent);
 }
 
-.story-stage-period {
+.story-vertical-period {
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--brand-accent);
-  margin-block-end: 0.85rem;
+  margin-block-end: 0.5rem;
   display: block;
 }
 
-.story-stage-desc {
-  font-size: 0.9rem;
+.story-vertical-title {
+  font-size: 1.35rem;
+  margin-block-end: 0.65rem;
+  color: var(--text-main);
+}
+
+.story-vertical-desc {
+  font-size: 0.92rem;
   color: var(--text-muted);
-  line-height: 1.55;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* About Philosophy Cards */
@@ -3205,24 +3322,30 @@ html.js-ready .rv.is-in {
 /* About Standard (4 Principles Around Center) */
 .standard-complex-wrap {
   display: grid;
-  grid-template-columns: 1fr 1.3fr 1fr;
-  gap: 2.5rem;
-  align-items: center;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 2.25rem;
+  align-items: stretch;
   margin-block-start: 3.5rem;
 }
 
 .standard-col {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  justify-content: space-between;
+  gap: 2rem;
+  height: 100%;
 }
 
 .standard-item-box {
   background: var(--bg-surface);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
-  padding: 1.75rem;
+  padding: 2rem 1.75rem;
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .standard-item-num {
@@ -3248,17 +3371,21 @@ html.js-ready .rv.is-in {
 
 .standard-central-visual {
   position: relative;
-  aspect-ratio: 4/5;
+  height: 100%;
+  min-height: 100%;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-xl);
   border: 1px solid var(--border-subtle);
+  display: flex;
 }
 
 .standard-central-visual img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .standard-visual-overlay {
@@ -3456,7 +3583,7 @@ html.js-ready .rv.is-in {
   margin: 0;
 }
 
-/* About Trust Principles */
+/* About Trust Principles (Image-Based) */
 .trust-principles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -3468,35 +3595,69 @@ html.js-ready .rv.is-in {
   background: var(--bg-surface);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
-  padding: 2rem;
+  overflow: hidden;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
-.trust-card-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-sm);
-  background: var(--brand-accent-bg);
-  color: var(--brand-accent);
-  display: grid;
-  place-items: center;
-  margin-block-end: 1.25rem;
+.trust-principle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--brand-accent);
 }
 
-.trust-card-icon svg {
-  width: 22px !important;
-  height: 22px !important;
+.trust-card-thumb {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: var(--bg-subtle);
 }
 
-.trust-principle-card h3 {
-  font-size: 1.2rem;
+.trust-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.trust-principle-card:hover .trust-card-thumb img {
+  transform: scale(1.06);
+}
+
+.trust-card-tag {
+  position: absolute;
+  inset-block-start: 0.75rem;
+  inset-inline-start: 0.75rem;
+  background: rgba(18, 24, 21, 0.85);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.trust-card-body {
+  padding: 1.5rem 1.35rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.trust-card-body h3 {
+  font-size: 1.15rem;
   margin-block-end: 0.5rem;
+  color: var(--text-main);
 }
 
-.trust-principle-card p {
-  font-size: 0.9rem;
+.trust-card-body p {
+  font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.55;
   margin: 0;
@@ -3705,7 +3866,13 @@ html.js-ready .rv.is-in {
 
   .philosophy-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
+  }
+
+  .philosophy-image-wrap {
+    height: 380px;
+    min-height: unset;
+    aspect-ratio: 16/10;
   }
 
   .materials-editorial {
@@ -3720,6 +3887,11 @@ html.js-ready .rv.is-in {
   .color-studio-wrap {
     grid-template-columns: 1fr;
     padding: 2rem;
+    gap: 2rem;
+  }
+
+  .studio-canvas {
+    min-height: 360px;
   }
 
   .arch-styles-grid {
@@ -3733,6 +3905,11 @@ html.js-ready .rv.is-in {
 
   .textures-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .monument-visual-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
   .expertise-monument {
@@ -3757,13 +3934,44 @@ html.js-ready .rv.is-in {
     max-width: 100%;
   }
 
-  .story-timeline-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.75rem;
+  .story-timeline-vertical::before {
+    inset-inline-start: 24px;
+    transform: none;
   }
 
-  .story-timeline-grid::before {
+  [dir="rtl"] .story-timeline-vertical::before {
+    inset-inline-start: auto;
+    inset-inline-end: 24px;
+    transform: none;
+  }
+
+  .story-vertical-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-inline-start: 4.5rem;
+    margin-block-end: 2.5rem;
+  }
+
+  .story-vertical-item:nth-child(odd) .story-vertical-card,
+  .story-vertical-item:nth-child(even) .story-vertical-card {
+    grid-column: 1;
+    text-align: start;
+  }
+
+  .story-vertical-item .story-vertical-spacer {
     display: none;
+  }
+
+  .story-vertical-node {
+    inset-inline-start: 24px;
+    inset-block-start: 2.5rem;
+    transform: translate(-50%, -50%);
+  }
+
+  [dir="rtl"] .story-vertical-node {
+    inset-inline-start: auto;
+    inset-inline-end: 24px;
+    transform: translate(50%, -50%);
   }
 
   .craft-philosophy-grid {
@@ -3776,8 +3984,9 @@ html.js-ready .rv.is-in {
   }
 
   .standard-central-visual {
-    order: -1;
-    aspect-ratio: 16/9;
+    order: 0;
+    height: 380px;
+    min-height: unset;
   }
 
   .team-editorial-grid {
@@ -3919,8 +4128,10 @@ html.js-ready .rv.is-in {
     flex-shrink: 0;
   }
 
-  .expertise-monument {
+  .expertise-monument,
+  .monument-visual-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .consult-form {

@@ -128,46 +128,58 @@
         </div>
 
         <div class="story-timeline-wrap">
-          <div class="story-timeline-grid">
+          <div class="story-timeline-vertical">
             <!-- Stage 1 -->
-            <article class="story-stage-card rv">
-              <div class="story-stage-step">01</div>
-              <span class="story-stage-period">The Beginning</span>
-              <h3 class="story-stage-title">A Higher Benchmark</h3>
-              <p class="story-stage-desc">
-                We founded SidingPro after noticing too many exterior contractors treating siding as fast superficial cladding—ignoring moisture barriers, crooked reveals, and deteriorating window corners.
-              </p>
-            </article>
+            <div class="story-vertical-item">
+              <article class="story-vertical-card rv">
+                <span class="story-vertical-period">Stage 01 · The Beginning</span>
+                <h3 class="story-vertical-title">A Higher Benchmark</h3>
+                <p class="story-vertical-desc">
+                  We founded SidingPro after noticing too many exterior contractors treating siding as fast superficial cladding—ignoring moisture barriers, crooked reveals, and deteriorating window corners.
+                </p>
+              </article>
+              <div class="story-vertical-node" aria-hidden="true">01</div>
+              <div class="story-vertical-spacer" aria-hidden="true"></div>
+            </div>
 
             <!-- Stage 2 -->
-            <article class="story-stage-card rv rv-delay-1">
-              <div class="story-stage-step">02</div>
-              <span class="story-stage-period">The Craft</span>
-              <h3 class="story-stage-title">Carpenter-Led Discipline</h3>
-              <p class="story-stage-desc">
-                We shifted from general labor to dedicated siding joinery. Every crew was trained in laser leveling, rainscreen ventilation gaps, and mitered exterior trim joinery.
-              </p>
-            </article>
+            <div class="story-vertical-item">
+              <div class="story-vertical-spacer" aria-hidden="true"></div>
+              <div class="story-vertical-node" aria-hidden="true">02</div>
+              <article class="story-vertical-card rv rv-delay-1">
+                <span class="story-vertical-period">Stage 02 · The Craft</span>
+                <h3 class="story-vertical-title">Carpenter-Led Discipline</h3>
+                <p class="story-vertical-desc">
+                  We shifted from general labor to dedicated siding joinery. Every crew was trained in laser leveling, rainscreen ventilation gaps, and mitered exterior trim joinery.
+                </p>
+              </article>
+            </div>
 
             <!-- Stage 3 -->
-            <article class="story-stage-card rv rv-delay-2">
-              <div class="story-stage-step">03</div>
-              <span class="story-stage-period">The Standard</span>
-              <h3 class="story-stage-title">Material Specialization</h3>
-              <p class="story-stage-desc">
-                Partnered directly with premier siding mills and manufacturers. We mastered fiber cement cutting protocols, insulated vinyl thermal expansion, and western red cedar sealing.
-              </p>
-            </article>
+            <div class="story-vertical-item">
+              <article class="story-vertical-card rv rv-delay-2">
+                <span class="story-vertical-period">Stage 03 · The Standard</span>
+                <h3 class="story-vertical-title">Material Specialization</h3>
+                <p class="story-vertical-desc">
+                  Partnered directly with premier siding mills and manufacturers. We mastered fiber cement cutting protocols, insulated vinyl thermal expansion, and western red cedar sealing.
+                </p>
+              </article>
+              <div class="story-vertical-node" aria-hidden="true">03</div>
+              <div class="story-vertical-spacer" aria-hidden="true"></div>
+            </div>
 
             <!-- Stage 4 -->
-            <article class="story-stage-card rv rv-delay-3">
-              <div class="story-stage-step">04</div>
-              <span class="story-stage-period">Today</span>
-              <h3 class="story-stage-title">Full Exterior Care</h3>
-              <p class="story-stage-desc">
-                Today, our team delivers high-touch consultations, meticulous installations, transparent daily updates, and architectural curb appeal that homeowners cherish for decades.
-              </p>
-            </article>
+            <div class="story-vertical-item">
+              <div class="story-vertical-spacer" aria-hidden="true"></div>
+              <div class="story-vertical-node" aria-hidden="true">04</div>
+              <article class="story-vertical-card rv rv-delay-3">
+                <span class="story-vertical-period">Stage 04 · Today &amp; Beyond</span>
+                <h3 class="story-vertical-title">Full Exterior Care</h3>
+                <p class="story-vertical-desc">
+                  Today, our team delivers high-touch consultations, meticulous installations, transparent daily updates, and architectural curb appeal that homeowners cherish for decades.
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </div>
@@ -519,53 +531,77 @@
         </div>
 
         <div class="trust-principles-grid">
-          <div class="trust-principle-card rv">
-            <div class="trust-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          <!-- 01 -->
+          <article class="trust-principle-card rv">
+            <div class="trust-card-thumb">
+              <img src="images/Home/hero.png" alt="Property and landscaping protection during exterior siding installation" loading="lazy">
+              <span class="trust-card-tag">Property Care</span>
             </div>
-            <h3>Property Protection Guarantee</h3>
-            <p>We shield your landscaping, flowerbeds, outdoor lighting, and air conditioners with protective plywood and tarps before work begins.</p>
-          </div>
+            <div class="trust-card-body">
+              <h3>Property Protection Guarantee</h3>
+              <p>We shield your landscaping, flowerbeds, outdoor lighting, and air conditioners with protective plywood and tarps before work begins.</p>
+            </div>
+          </article>
 
-          <div class="trust-principle-card rv rv-delay-1">
-            <div class="trust-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          <!-- 02 -->
+          <article class="trust-principle-card rv rv-delay-1">
+            <div class="trust-card-thumb">
+              <img src="images/g1.jpg" alt="Dedicated field project manager providing daily exterior progress updates" loading="lazy">
+              <span class="trust-card-tag">Communication</span>
             </div>
-            <h3>Daily Communication</h3>
-            <p>You receive concise end-of-day text updates outlining what was accomplished, what is planned next, and upcoming weather considerations.</p>
-          </div>
+            <div class="trust-card-body">
+              <h3>Daily Communication</h3>
+              <p>You receive concise end-of-day text updates outlining what was accomplished, what is planned next, and upcoming weather considerations.</p>
+            </div>
+          </article>
 
-          <div class="trust-principle-card rv rv-delay-2">
-            <div class="trust-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <!-- 03 -->
+          <article class="trust-principle-card rv rv-delay-2">
+            <div class="trust-card-thumb">
+              <img src="images/craftsmanship.jpg" alt="Master craftsman checking siding fastener depth and spacing" loading="lazy">
+              <span class="trust-card-tag">Structural Integrity</span>
             </div>
-            <h3>Certified Fastener Schedules</h3>
-            <p>Every board is nailed into solid wall studs using corrosion-resistant hot-dipped galvanized or stainless steel fasteners at strict manufacturer depths.</p>
-          </div>
+            <div class="trust-card-body">
+              <h3>Certified Fastener Schedules</h3>
+              <p>Every board is nailed into solid wall studs using corrosion-resistant hot-dipped galvanized or stainless steel fasteners at strict manufacturer depths.</p>
+            </div>
+          </article>
 
-          <div class="trust-principle-card rv">
-            <div class="trust-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          <!-- 04 -->
+          <article class="trust-principle-card rv">
+            <div class="trust-card-thumb">
+              <img src="images/arch_detail.jpg" alt="Organized materials staged neatly on protective dunnage" loading="lazy">
+              <span class="trust-card-tag">Cleanliness</span>
             </div>
-            <h3>Organized Job Site</h3>
-            <p>Materials are neatly staged on dunnage, waste is disposed of into roll-off containers daily, and driveways are kept clear for homeowner vehicles.</p>
-          </div>
+            <div class="trust-card-body">
+              <h3>Organized Job Site</h3>
+              <p>Materials are neatly staged on dunnage, waste is disposed of into roll-off containers daily, and driveways are kept clear for homeowner vehicles.</p>
+            </div>
+          </article>
 
-          <div class="trust-principle-card rv rv-delay-1">
-            <div class="trust-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <!-- 05 -->
+          <article class="trust-principle-card rv rv-delay-1">
+            <div class="trust-card-thumb">
+              <img src="images/cement.jpg" alt="Mill direct siding packaging and warranty certificates" loading="lazy">
+              <span class="trust-card-tag">Transparency</span>
             </div>
-            <h3>Material Transparency</h3>
-            <p>All siding bundles, trim components, flashing rolls, and housewrap products are delivered in original manufacturer packaging with full warranty certificates.</p>
-          </div>
+            <div class="trust-card-body">
+              <h3>Material Transparency</h3>
+              <p>All siding bundles, trim components, flashing rolls, and housewrap products are delivered in original manufacturer packaging with full warranty certificates.</p>
+            </div>
+          </article>
 
-          <div class="trust-principle-card rv rv-delay-2">
-            <div class="trust-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <!-- 06 -->
+          <article class="trust-principle-card rv rv-delay-2">
+            <div class="trust-card-thumb">
+              <img src="images/after.jpg" alt="Final daylight inspection and homeowner quality walkthrough" loading="lazy">
+              <span class="trust-card-tag">Quality Sign-Off</span>
             </div>
-            <h3>Final Walkthrough Approval</h3>
-            <p>We do not issue final invoices until the homeowner has completed a comprehensive daylight walkthrough with the project manager and signed off on quality.</p>
-          </div>
+            <div class="trust-card-body">
+              <h3>Final Walkthrough Approval</h3>
+              <p>We do not issue final invoices until the homeowner has completed a comprehensive daylight walkthrough with the project manager and signed off on quality.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
