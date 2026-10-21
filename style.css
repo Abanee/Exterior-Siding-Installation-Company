@@ -109,7 +109,7 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
-  max-width: 100vw;
+  max-width: 100%;
 }
 
 body {
@@ -121,7 +121,7 @@ body {
   background-color: var(--bg-body);
   transition: background-color var(--transition-normal), color var(--transition-normal);
   overflow-x: hidden;
-  max-width: 100vw;
+  max-width: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -917,6 +917,15 @@ button, input, select, textarea {
 .btn-lg {
   padding: 1.1rem 2.25rem;
   font-size: 1.05rem;
+}
+
+.btn-block {
+  display: flex !important;
+  width: 100% !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
 }
 
 .arrow-icon {
@@ -4670,17 +4679,28 @@ html.js-ready .rv.is-in {
   grid-template-columns: 1.15fr 0.85fr;
   gap: 4.5rem;
   align-items: stretch;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .mat-feature-grid.reverse {
   grid-template-columns: 0.85fr 1.15fr;
   align-items: stretch;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .mat-feature-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .mat-feature-visual {
@@ -4692,6 +4712,10 @@ html.js-ready .rv.is-in {
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border-subtle);
   display: flex;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .mat-feature-visual img {
@@ -4707,6 +4731,8 @@ html.js-ready .rv.is-in {
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   margin-block: 2rem;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .mat-spec-box {
@@ -4714,6 +4740,9 @@ html.js-ready .rv.is-in {
   border: 1px solid var(--border-card);
   border-radius: var(--radius-sm);
   padding: 1.25rem 1.15rem;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .mat-spec-label {
@@ -4737,14 +4766,20 @@ html.js-ready .rv.is-in {
 .comparison-table-wrap {
   margin-block-start: 3rem;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   background: var(--bg-surface);
   box-shadow: var(--shadow-sm);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: block;
 }
 
 .homeowner-compare-table {
   width: 100%;
+  min-width: 580px;
   border-collapse: collapse;
   text-align: start;
   font-size: 0.95rem;
@@ -5278,7 +5313,13 @@ html.js-ready .rv.is-in {
 
 @media (max-width: 640px) {
   .mat-feature-visual {
-    height: 280px;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16/10;
+    height: auto;
+    min-height: 200px;
+    overflow: hidden;
+    box-sizing: border-box;
   }
 
   .color-inspiration-grid,
@@ -6818,7 +6859,37 @@ html.js-ready .rv.is-in {
   .quiz-container-box,
   .transparency-box,
   .doc-mockup-box {
-    padding: 1.75rem 1.25rem;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .quiz-questions-column,
+  .quiz-step-block {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .quiz-btn-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .quiz-option-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.85rem;
+    white-space: normal;
+    word-break: break-word;
+    box-sizing: border-box;
   }
 }
 
@@ -6942,6 +7013,28 @@ html.js-ready .rv.is-in {
 
 .auth-link:hover {
   text-decoration: underline;
+}
+
+.auth-form .btn-primary,
+.auth-form button[type="submit"] {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  padding: 0.95rem 1.5rem !important;
+  font-size: 1rem !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 2rem 1.25rem;
+    margin-block: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 .auth-footer-prompt {
@@ -7553,7 +7646,79 @@ html.js-ready .rv.is-in {
   }
   .h2-consult-hub,
   .h1-eval-hub {
-    padding: 2rem 1.25rem;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .h1-eval-trust-box {
+    padding: 1.25rem 1rem;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .h1-eval-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    width: 100%;
+  }
+  .h1-eval-chip {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.6rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .h1-eval-cta-group {
+    width: 100%;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .h1-eval-cta-group .btn {
+    width: 100% !important;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+  }
+  .h2-consult-action-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem 1rem;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .h2-consult-action-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+    width: 100%;
+  }
+  .h2-consult-action-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .h2-consult-action-right .btn {
+    width: 100% !important;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+    box-sizing: border-box;
   }
   .gallery-toolbar-wrap {
     flex-direction: column;
@@ -7561,6 +7726,12 @@ html.js-ready .rv.is-in {
   }
   .gallery-search-wrap {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-inline: 1rem;
   }
 }
 
