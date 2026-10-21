@@ -757,7 +757,7 @@
         if (counterLabel) {
           counterLabel.textContent = `Showing all ${galleryCards.length} of ${galleryCards.length} Projects`;
         }
-        viewMoreBtn.innerHTML = `<span>All 20 Projects Displayed ✓</span>`;
+        viewMoreBtn.innerHTML = `<span>All ${galleryCards.length} Projects Displayed ✓</span>`;
         viewMoreBtn.style.opacity = '0.7';
         viewMoreBtn.style.pointerEvents = 'none';
       });
@@ -771,7 +771,7 @@
         const specs = card.getAttribute('data-specs');
         const loc = card.getAttribute('data-loc');
 
-        if (lightboxImg) lightboxImg.src = img || 'images/hero.jpg';
+        if (lightboxImg) lightboxImg.src = img || 'images/Gallery/01.jpg';
         if (lightboxTitle) lightboxTitle.textContent = title || 'Exterior Project';
         if (lightboxSpecs) lightboxSpecs.textContent = `${specs || ''} · ${loc || ''}`;
 
