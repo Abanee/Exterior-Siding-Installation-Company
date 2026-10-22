@@ -4003,24 +4003,46 @@ html.js-ready .rv.is-in {
 }
 
 .about-cta-box {
-  background: var(--bg-surface);
+  position: relative;
+  background: linear-gradient(rgba(14, 21, 18, 0.85), rgba(14, 21, 18, 0.92)),
+              url('images/cta_about.jpg') center/cover no-repeat;
   border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
-  padding: 4rem 3rem;
+  padding: 4.5rem 3rem;
   text-align: center;
   max-width: 860px;
   margin-inline: auto;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-xl);
+  color: #ffffff;
+  overflow: hidden;
 }
 
-.about-cta-box h2 {
+.pricing-cta-box {
+  position: relative;
+  background: linear-gradient(rgba(14, 21, 18, 0.85), rgba(14, 21, 18, 0.92)),
+              url('images/cta_pricing.jpg') center/cover no-repeat;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 4.5rem 3rem;
+  text-align: center;
+  max-width: 860px;
+  margin-inline: auto;
+  box-shadow: var(--shadow-xl);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.about-cta-box h2,
+.pricing-cta-box h2 {
   font-size: clamp(2rem, 3.8vw, 3rem);
   margin-block-end: 1rem;
+  color: #ffffff;
 }
 
-.about-cta-box p {
+.about-cta-box p,
+.pricing-cta-box p {
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: #d1ded7;
   max-width: 58ch;
   margin-inline: auto;
   margin-block-end: 2.25rem;
@@ -4095,7 +4117,6 @@ html.js-ready .rv.is-in {
   }
 
   /* Single or Two Div Rows Centering across all pages */
-  .mat-grid,
   .proc-grid,
   .gal-grid,
   .price-grid,
@@ -4115,9 +4136,6 @@ html.js-ready .rv.is-in {
     justify-items: center !important;
   }
 
-  .mat-grid > *,
-  .gal-grid > *,
-  .price-grid > *,
   .monument-visual-grid > *,
   .transparency-grid > *,
   .mat-cost-grid > *,
@@ -4131,7 +4149,46 @@ html.js-ready .rv.is-in {
 
   /* Home 1 */
   .mat-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .mat-grid > * {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .mat-card .card-body {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .mat-card .card-tag {
+    font-size: 0.74rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    margin-block-end: 0.65rem;
+  }
+
+  .mat-card .card-body h3 {
+    font-size: 1.25rem;
+    min-height: 1.8rem;
+    line-height: 1.35;
+    margin-block-end: 0.65rem;
+  }
+
+  .mat-card .card-body p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    min-height: 5.6rem;
+    margin-block-end: 1.5rem;
+  }
+
+  .mat-card .card-link {
+    margin-block-start: auto;
   }
 
   .proc-grid {
@@ -4139,11 +4196,25 @@ html.js-ready .rv.is-in {
   }
 
   .gal-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .gal-grid > * {
+    max-width: 100%;
+    width: 100%;
   }
 
   .price-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .price-grid > * {
+    max-width: 100%;
+    width: 100%;
   }
 
   .estimate-wrap {
@@ -4161,6 +4232,12 @@ html.js-ready .rv.is-in {
     inset-inline-start: 0;
     inset-block-end: -6%;
     width: 36%;
+  }
+
+  .h2-hero-indicator {
+    inset-inline-end: 1.25rem;
+    inset-block-start: 1.25rem;
+    max-width: 240px;
   }
 
   .philosophy-grid {
@@ -4359,6 +4436,26 @@ html.js-ready .rv.is-in {
   .footer-top-grid {
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
+  }
+}
+
+/* Tablet Portrait (<=768px) */
+@media (max-width: 768px) {
+  .mat-grid,
+  .gal-grid,
+  .price-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-content: center !important;
+    justify-items: center !important;
+  }
+
+  .mat-grid > *,
+  .gal-grid > *,
+  .price-grid > * {
+    max-width: 580px;
+    width: 100%;
+    margin-inline: auto;
   }
 }
 
@@ -4986,15 +5083,15 @@ html.js-ready .rv.is-in {
 
 .homeowner-compare-table {
   width: 100%;
-  min-width: 580px;
+  table-layout: fixed;
   border-collapse: collapse;
   text-align: start;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }
 
 .homeowner-compare-table th,
 .homeowner-compare-table td {
-  padding: 1.35rem 1.6rem;
+  padding: 1.25rem 1.35rem;
   border-block-end: 1px solid var(--border-subtle);
   vertical-align: top;
 }
@@ -5009,21 +5106,20 @@ html.js-ready .rv.is-in {
   background: var(--bg-subtle);
 }
 
-.homeowner-compare-table th.col-feature {
-  width: 20%;
-}
-
+.homeowner-compare-table th.col-feature,
 .homeowner-compare-table td.feature-title {
+  width: 22%;
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--text-main);
   background: var(--bg-subtle);
 }
 
-.homeowner-compare-table td {
+.homeowner-compare-table th:not(.col-feature),
+.homeowner-compare-table td:not(.feature-title) {
+  width: 26%;
   color: var(--text-body);
   line-height: 1.55;
-  width: 26.66%;
 }
 
 .homeowner-compare-table tr:last-child td {
@@ -5456,24 +5552,29 @@ html.js-ready .rv.is-in {
 
 /* Products Consultation CTA */
 .prod-cta-box {
-  background: var(--bg-surface);
+  position: relative;
+  background: linear-gradient(rgba(14, 21, 18, 0.85), rgba(14, 21, 18, 0.92)),
+              url('images/cta_products.jpg') center/cover no-repeat;
   border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
-  padding: 4rem 3rem;
+  padding: 4.5rem 3rem;
   text-align: center;
   max-width: 860px;
   margin-inline: auto;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-xl);
+  color: #ffffff;
+  overflow: hidden;
 }
 
 .prod-cta-box h2 {
   font-size: clamp(2rem, 3.8vw, 3rem);
   margin-block-end: 1rem;
+  color: #ffffff;
 }
 
 .prod-cta-box p {
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: #d1ded7;
   max-width: 58ch;
   margin-inline: auto;
   margin-block-end: 2.25rem;
@@ -5922,6 +6023,27 @@ html.js-ready .rv.is-in {
   align-items: center;
   flex-wrap: wrap;
   gap: 1.5rem;
+}
+
+/* Gallery Consultation CTA */
+.gallery-cta-section {
+  position: relative;
+  background: linear-gradient(rgba(14, 21, 18, 0.85), rgba(14, 21, 18, 0.92)),
+              url('images/cta_gallery.jpg') center/cover no-repeat;
+  padding-block: 6rem;
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.gallery-cta-section h2 {
+  color: #ffffff;
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  margin-block-end: 1rem;
+}
+
+.gallery-cta-section p {
+  color: #d1ded7 !important;
 }
 
 /* ==========================================================================
@@ -7870,10 +7992,12 @@ html.js-ready .rv.is-in {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.5rem;
-  background: var(--bg-subtle);
+  background: linear-gradient(rgba(14, 21, 18, 0.88), rgba(14, 21, 18, 0.94)),
+              url('images/cta.jpg') center/cover no-repeat;
   border-radius: var(--radius-md);
-  padding: 1.5rem 2rem;
+  padding: 1.85rem 2.25rem;
   border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-lg);
 }
 
 .h2-consult-action-left {
