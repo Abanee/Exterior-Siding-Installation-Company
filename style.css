@@ -3180,7 +3180,7 @@ html.js-ready .rv.is-in {
   position: relative;
   padding-block: 8.5rem 5.5rem;
   background: linear-gradient(rgba(14, 21, 18, 0.78), rgba(14, 21, 18, 0.86)),
-              url('images/craftsmanship.jpg') center/cover no-repeat;
+              url('images/Banner/About.png') center/cover no-repeat;
   text-align: center;
   color: #ffffff;
   overflow: hidden;
@@ -4537,7 +4537,7 @@ html.js-ready .rv.is-in {
   position: relative;
   padding-block: 8.5rem 5.5rem;
   background: linear-gradient(rgba(14, 21, 18, 0.78), rgba(14, 21, 18, 0.86)),
-              url('images/cement.jpg') center/cover no-repeat;
+              url('images/Banner/Product.png') center/cover no-repeat;
   text-align: center;
   color: #ffffff;
   overflow: hidden;
@@ -5479,7 +5479,7 @@ html.js-ready .rv.is-in {
   position: relative;
   padding-block: 8.5rem 4.5rem;
   background: linear-gradient(rgba(14, 21, 18, 0.78), rgba(14, 21, 18, 0.86)),
-              url('images/arch_hero.jpg') center/cover no-repeat;
+              url('images/Banner/gallery.png') center/cover no-repeat;
   text-align: center;
   color: #ffffff;
   overflow: hidden;
@@ -5765,7 +5765,7 @@ html.js-ready .rv.is-in {
   position: relative;
   padding-block: 8.5rem 4.5rem;
   background: linear-gradient(rgba(14, 21, 18, 0.78), rgba(14, 21, 18, 0.86)),
-              url('images/Home/hero.png') center/cover no-repeat;
+              url('images/Banner/Contact.jpg') center/cover no-repeat;
   text-align: center;
   color: #ffffff;
   overflow: hidden;
@@ -6113,7 +6113,7 @@ html.js-ready .rv.is-in {
   position: relative;
   padding-block: 8.5rem 5.5rem;
   background: linear-gradient(rgba(14, 21, 18, 0.78), rgba(14, 21, 18, 0.86)),
-              url('images/hero.jpg') center/cover no-repeat;
+              url('images/Banner/pricing.png') center/cover no-repeat;
   text-align: center;
   color: #ffffff;
   overflow: hidden;
