@@ -8852,11 +8852,13 @@ html.js-ready .rv.is-in {
 
 .cta-check-item {
   display: flex;
-  align-items: center;
-  gap: 0.6rem;
+  align-items: flex-start;
+  gap: 0.65rem;
   font-size: 0.86rem;
+  line-height: 1.45;
   color: #e3ede8;
   font-weight: 500;
+  text-align: start;
 }
 
 .cta-check-item svg {
@@ -8864,22 +8866,27 @@ html.js-ready .rv.is-in {
   height: 16px;
   color: var(--brand-accent);
   flex-shrink: 0;
+  margin-block-start: 2px;
 }
 
 .cta-rating-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
   font-size: 0.8rem;
+  line-height: 1.4;
   color: rgba(255, 255, 255, 0.75);
   padding-block-start: 0.65rem;
   border-block-start: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: start;
 }
 
 .cta-stars {
   color: #f59e0b;
   font-size: 0.85rem;
   letter-spacing: 1px;
+  flex-shrink: 0;
+  margin-block-start: 1px;
 }
 
 /* --------------------------------------------------------------------------
@@ -9379,6 +9386,13 @@ html.js-ready .rv.is-in {
     justify-content: center !important;
     box-sizing: border-box !important;
   }
+  .cta-floating-card {
+    width: 100% !important;
+    max-width: 500px !important;
+    margin-inline: auto !important;
+    box-sizing: border-box !important;
+    text-align: start !important;
+  }
 }
 
 /* Small Mobile Viewport Optimization (e.g. Samsung Galaxy S8+ 360px & iPhone SE) */
@@ -9389,6 +9403,11 @@ html.js-ready .rv.is-in {
 
   .page-cta-container {
     padding-inline: 1rem !important;
+  }
+
+  .cta-floating-card {
+    padding: 1.25rem 1.15rem !important;
+    max-width: 100% !important;
   }
 
   .cta-title-bold {
